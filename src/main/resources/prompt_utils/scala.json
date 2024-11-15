@@ -1,0 +1,43 @@
+{
+  "type": "object",
+  "title": "",
+  "languageCompetencies": {
+    "functional_programming_principles": {
+      "evaluation": 0
+    },
+    "immutable_data_structures": {
+      "evaluation": 0
+    },
+    "pattern_matching": {
+      "evaluation": 0
+    },
+    "higher_order_functions": {
+      "evaluation": 0
+    },
+    "trait_and_mixin_composition": {
+      "evaluation": 0
+    },
+    "concurrency": {
+      "evaluation": 0
+    },
+    "type_inference": {
+      "evaluation": 0
+    },
+    "for_comprehensions": {
+      "evaluation": 0
+    },
+    "collections_library": {
+      "evaluation": 0
+    }
+  },
+  "algorithmSkills": {
+    "evaluation": 0
+  },
+  "dbSkills": {
+    "evaluation": 0
+  },
+  "brokerSkills": {
+    "evaluation": 0
+  },
+  "summary": ""
+}

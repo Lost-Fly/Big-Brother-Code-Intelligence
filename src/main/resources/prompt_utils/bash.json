@@ -1,0 +1,46 @@
+{
+  "type": "object",
+  "title": "",
+  "languageCompetencies": {
+    "bash_scripting_basics": {
+      "evaluation": 0
+    },
+    "variable_manipulation": {
+      "evaluation": 0
+    },
+    "control_structures": {
+      "evaluation": 0
+    },
+    "command_substitution": {
+      "evaluation": 0
+    },
+    "input_and_output_redirection": {
+      "evaluation": 0
+    },
+    "function_definitions": {
+      "evaluation": 0
+    },
+    "error_handling_and_exit_codes": {
+      "evaluation": 0
+    },
+    "string_and_array_operations": {
+      "evaluation": 0
+    },
+    "process_substitution": {
+      "evaluation": 0
+    },
+    "using_bash_builtin_commands": {
+      "evaluation": 0
+    }
+  },
+  "algorithmSkills": {
+    "evaluation": 0
+  },
+  "dbSkills": {
+    "evaluation": 0
+  },
+  "brokerSkills": {
+    "evaluation": 0
+  },
+  "summary": ""
+}

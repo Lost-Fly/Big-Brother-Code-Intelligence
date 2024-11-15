@@ -1,0 +1,40 @@
+{
+  "type": "object",
+  "title": "",
+  "languageCompetencies": {
+    "experience_writing_tests": {
+      "evaluation": 0
+    },
+    "experience_with_orm_sql": {
+      "evaluation": 0
+    },
+    "knowledge_of_logging": {
+      "evaluation": 0
+    },
+    "experience_async_code": {
+      "evaluation": 0
+    },
+    "decorators_usage": {
+      "evaluation": 0
+    },
+    "context_managers": {
+      "evaluation": 0
+    },
+    "generators": {
+      "evaluation": 0
+    },
+    "external_apis": {
+      "evaluation": 0
+    }
+  },
+  "algorithmSkills": {
+    "evaluation": 0
+  },
+  "dbSkills": {
+    "evaluation": 0
+  },
+  "brokerSkills": {
+    "evaluation": 0
+  },
+  "summary": ""
+}

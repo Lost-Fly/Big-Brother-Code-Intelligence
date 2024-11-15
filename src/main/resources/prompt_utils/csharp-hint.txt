@@ -1,0 +1,51 @@
+Evaluation hints for language c#
+garbage_collection_understanding:
+0 - 2 points: Understanding how the garbage collector works in C#, the object lifecycle, and the role of the garbage collector in memory management.
+3 - 5 points: Optimizing the garbage collector by minimizing allocations, managing the lifetime of objects and understanding generational collections.
+6 - 8 points: Implementation of custom memory management strategies, fine-tuning the garbage collector for mission-critical applications.
+9 - 10 points: In-depth debugging and prevention of memory problems, performance management and configuration of the collector for stable, high-performance applications.
+asynchronous_programming:
+0 - 2 points: Understanding the basics of asynchronous programming in C#, using the keywords async and await to perform non-blocking operations.
+3 - 5 points: Implementation of asynchronous methods, task-based task management and templates, competition management.
+6 - 8 points: Designing complex asynchronous workflows, optimizing asynchronous code for performance.
+9 - 10 points: Creating highly loaded asynchronous applications using advanced patterns such as reactive programming, thread safety.
+delegates_and_events:
+0 - 2 points: Understanding delegates and their declaration and invocation in C#.
+3 - 5 points: Creating and using events, using delegates to manage subscriptions.
+6 - 8 points: Designing an event-based architecture, optimizing delegate performance.
+9 - 10 points: Development of scalable architectures, use of generalized delegates, setting up custom delegate types for complex systems.
+linq_queries:
+0 - 2 points: Using LINQ to make simple queries to collections and understanding query syntax and methods.
+3 - 5 points: Writing more complex queries with joins, grouping, projections and aggregate functions.
+6 - 8 points: Creating complex LINQ queries, optimizing LINQ performance for large datasets.
+9 - 10 points: Development and implementation of custom LINQ providers, setting up deferred execution for processing data on large volumes.
+understanding_csharp_type_system:
+0 - 2 points: Understanding basic C# data types such as meaningful and reference types, and basic type conversions.
+3 - 5 points: Using complex types such as nullable, generalizations, and type constraints.
+6 - 8 points: Deep knowledge of type inheritance, covariance and contravariance, reflection and dynamic types.
+9 - 10 points: Creating scalable architectures, using dependent types, optimizing performance with strict type constraints.
+generics:
+0 - 2 points: The basics of syntax and the use of generalizations, including generalized classes and methods.
+3 - 5 points: Implementing restrictions on generalizations, using collections, writing reusable components.
+6 - 8 points: Creating complex generalized frameworks, using covariance and contravariance.
+9 - 10 points: Optimization of generalizations for performance and typical security, creation of scalable applications with flexible architecture.
+exception_handling:
+0 - 2 points: The basics of exception handling, including the try, catch, and finally blocks.
+3 - 5 points: Create custom exceptions, use robust error handling strategies, and free up resources.
+6 - 8 points: Development of comprehensive exception management frameworks and implementation of reliable control.
+9 - 10 points: Create scalable exception handling systems that are resilient to failures, and integrate logging and monitoring.
+unsafe_code_and_pointers:
+0 - 2 points: Knowledge of unsafe code and the use of pointers to work with memory.
+3 - 5 points: Implementing pointer arithmetic and working with memory in the context of unsafe code.
+6 - 8 points: Performance optimization using pointers and working with unmanaged code.
+9 - 10 points: Memory management in resource-intensive applications and ensuring security when using unsafe code.
+extension_methods:
+0 - 2 points: Understanding the concept of extension methods and adding new functions to existing types.
+3 - 5 points: Creating complex extension methods to improve LINQ functions and design patterns.
+6 - 8 points: Creating libraries of extension methods to improve the modularity and maintainability of the code.
+9 - 10 points: Integration of extension methods to create user-friendly interfaces and improve code readability in scalable systems.
+api_usage:
+0 - 2 points: The basics of interacting with the API, including HTTP requests and response processing.
+3 - 5 points: Integration with RESTful and SOAP APIs, authorization management and asynchronous calls.
+6 - 8 points: Design and implementation of reliable API interaction strategies, performance optimization.
+9 - 10 points: Creating complex abstraction layers for API interaction, ensuring security and reliability for high-load applications.

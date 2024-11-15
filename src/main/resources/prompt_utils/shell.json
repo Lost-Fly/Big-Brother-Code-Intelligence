@@ -1,0 +1,46 @@
+{
+  "type": "object",
+  "title": "",
+  "languageCompetencies": {
+    "command_line_proficiency": {
+      "evaluation": 0
+    },
+    "file_and_directory_manipulation": {
+      "evaluation": 0
+    },
+    "text_processing_with_tools_like_sed_awk": {
+      "evaluation": 0
+    },
+    "streaming_pipelines": {
+      "evaluation": 0
+    },
+    "process_management": {
+      "evaluation": 0
+    },
+    "environment_variable_management": {
+      "evaluation": 0
+    },
+    "shell_scripting_basics": {
+      "evaluation": 0
+    },
+    "permission_and_security_management": {
+      "evaluation": 0
+    },
+    "job_control": {
+      "evaluation": 0
+    },
+    "using_standard_utilities": {
+      "evaluation": 0
+    }
+  },
+  "algorithmSkills": {
+    "evaluation": 0
+  },
+  "dbSkills": {
+    "evaluation": 0
+  },
+  "brokerSkills": {
+    "evaluation": 0
+  },
+  "summary": ""
+}

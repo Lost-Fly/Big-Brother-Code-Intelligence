@@ -1,0 +1,46 @@
+{
+  "type": "object",
+  "title": "",
+  "languageCompetencies": {
+    "error_handling": {
+      "evaluation": 0
+    },
+    "associative_arrays": {
+      "evaluation": 0
+    },
+    "understanding_php_syntax": {
+      "evaluation": 0
+    },
+    "object_oriented_programming": {
+      "evaluation": 0
+    },
+    "handling_http_requests": {
+      "evaluation": 0
+    },
+    "working_with_superglobals": {
+      "evaluation": 0
+    },
+    "memory_management": {
+      "evaluation": 0
+    },
+    "using_php_standard_library": {
+      "evaluation": 0
+    },
+    "understanding_php_interpreter": {
+      "evaluation": 0
+    },
+    "security": {
+      "evaluation": 0
+    }
+  },
+  "algorithmSkills": {
+    "evaluation": 0
+  },
+  "dbSkills": {
+    "evaluation": 0
+  },
+  "brokerSkills": {
+    "evaluation": 0
+  },
+  "summary": ""
+}

@@ -1,0 +1,46 @@
+{
+  "type": "object",
+  "title": "",
+  "languageCompetencies": {
+    "metaprogramming": {
+      "evaluation": 0
+    },
+    "block_and_procs": {
+      "evaluation": 0
+    },
+    "object_oriented_principles": {
+      "evaluation": 0
+    },
+    "dynamic_typing_understanding": {
+      "evaluation": 0
+    },
+    "garbage_collection_understanding": {
+      "evaluation": 0
+    },
+    "ruby_standard_library": {
+      "evaluation": 0
+    },
+    "exception_handling": {
+      "evaluation": 0
+    },
+    "memory_management": {
+      "evaluation": 0
+    },
+    "reflection_and_introspection": {
+      "evaluation": 0
+    },
+    "syntax_and_conventions": {
+      "evaluation": 0
+    }
+  },
+  "algorithmSkills": {
+    "evaluation": 0
+  },
+  "dbSkills": {
+    "evaluation": 0
+  },
+  "brokerSkills": {
+    "evaluation": 0
+  },
+  "summary": ""
+}

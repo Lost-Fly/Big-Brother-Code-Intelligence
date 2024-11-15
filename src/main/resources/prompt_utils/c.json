@@ -1,0 +1,46 @@
+{
+  "type": "object",
+  "title": "",
+  "languageCompetencies": {
+    "pointer_arithmetic": {
+      "evaluation": 0
+    },
+    "memory_management": {
+      "evaluation": 0
+    },
+    "preprocessor_macros": {
+      "evaluation": 0
+    },
+    "manual_resource_management": {
+      "evaluation": 0
+    },
+    "understanding_standard_library": {
+      "evaluation": 0
+    },
+    "buffer_overflow_prevention": {
+      "evaluation": 0
+    },
+    "bitwise_operations": {
+      "evaluation": 0
+    },
+    "inline_assembly": {
+      "evaluation": 0
+    },
+    "file_io": {
+      "evaluation": 0
+    },
+    "signal_handling": {
+      "evaluation": 0
+    }
+  },
+  "algorithmSkills": {
+    "evaluation": 0
+  },
+  "dbSkills": {
+    "evaluation": 0
+  },
+  "brokerSkills": {
+    "evaluation": 0
+  },
+  "summary": ""
+}

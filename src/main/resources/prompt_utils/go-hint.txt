@@ -1,0 +1,51 @@
+Evaluation hints for language go
+concurrency:
+0 - 2 points: Understanding the basics of competitiveness in Go, creating and managing Goroutines to perform parallel tasks.
+3 - 5 points: Using channels to coordinate and synchronize Goroutines, prevent data races and implement competitive patterns.
+6 - 8 points: Designing complex competitive systems, optimizing the use of Goroutines to increase productivity, implementing advanced patterns such as worker pool.
+9 - 10 points: Creating high-performance applications using competitiveness, ensuring thread safety and maximum efficiency in scalable systems.
+channel_management:
+0 - 2 points: Creating and using channels for communication between Goroutines.
+3 - 5 points: Managing buffered and unbuffered channels, closing channels, and synchronizing with them.
+6 - 8 points: Development of complex channel architectures, use of select for multi-channel operations and optimization of channel usage.
+9 - 10 points: Designing high-performance systems to optimize channel usage and prevent blockages and resource leaks.
+error_handling:
+0 - 2 points: Using the error type to handle errors and simply propagate them through function calls.
+3 - 5 points: Creating custom error types, using error wrappers, and managing error transmission in large codebases.
+6 - 8 points: Development of reliable error handling strategies, integration with logging and monitoring systems, use of context for error management.
+9 - 10 points: Designing scalable systems with integrated error management, ensuring the stability and sustainability of applications.
+interfaces_and_type_embeddings:
+0 - 2 points: Understanding interfaces in Go and creating simple interfaces to abstract behavior.
+3 - 5 points: Using type embedding to build complex structures, creating hierarchies of interfaces for extensible code.
+6 - 8 points: Development of flexible architectures using interfaces for encapsulation and independence of components.
+9 - 10 points: Optimization of interface hierarchies for scalable applications, design of architectures with a high degree of reuse and maintainability.
+memory_management:
+0 - 2 points: Understanding garbage collection in Go, memory management through variables and scope.
+3 - 5 points: Optimization of memory usage with minimization of allocations, use of efficient data structures.
+6 - 8 points: Profiling and optimizing memory usage, managing large amounts of memory for high-performance applications.
+9 - 10 points: Creation of memory management strategies for applications with high performance requirements, integration of custom memory optimization solutions.
+understanding_go_runtime:
+0 - 2 points: The basics of understanding how the Go runtime works, including the use of Goroutines and the work of the scheduler.
+3 - 5 points: Understanding runtime characteristics such as garbage collection and stack management.
+6 - 8 points: Optimizing code based on the characteristics of the runtime environment, using environment metrics to improve performance.
+9 - 10 points: Extending the capabilities of the runtime environment for specialized applications, optimizing performance by fine-tuning the environment.
+logging:
+0 - 2 points: Using the standard Go logging package for simple message logging.
+3 - 5 points: Implementation of structured logging, management of logging levels and integration with external systems.
+6 - 8 points: Design of complex logging systems, ensuring high-performance logging and security.
+9 - 10 points: Creating reliable logging frameworks, collecting and analyzing logs for monitoring and debugging large-scale applications.
+defer_usage:
+0 - 2 points: Understanding the use of defer to clean up resources in simple scenarios.
+3 - 5 points: Managing multiple defer calls, understanding the impact on performance, and using it in complex functions.
+6 - 8 points: Strategic placement of defer for effective resource management, performance optimization.
+9 - 10 points: Using defer for secure resource management in competitive scenarios and building scalable systems.
+reflection_with_reflect:
+0 - 2 points: Using the reflect package to explore types and values at runtime.
+3 - 5 points: Manipulation of data structures dynamically, creation of universal functions using reflection.
+6 - 8 points: Optimizing the use of reflection for performance, creating utilities based on reflection.
+9 - 10 points: Applying reflection to create dynamic and flexible systems, ensuring type safety in large applications.
+testing_and_benchmarking:
+0 - 2 points: Writing simple tests using the testing package, understanding basic functions and statements.
+3 - 5 points: Create tests with data tables, use coverage tools, and write benchmarks to measure performance.
+6 - 8 points: Designing testing strategies, integrating tests and benchmarks into CI/CD pipelines.
+9 - 10 points: Creation and optimization of complex testing and benchmarking frameworks for high-load applications, ensuring reliability and quality.

@@ -1,0 +1,51 @@
+Evaluation hints for language javascript
+prototypal_inheritance:
+0 - 2 points: Understanding the basics of prototypal inheritance, creating and extending objects through prototypes.
+3 - 5 points: Using Object.create to create hierarchies of objects, managing the prototype chain.
+6 - 8 points: Development of complex architectures with prototypical inheritance, performance optimization.
+9 - 10 points: Create scalable applications with deep use of prototypes, manage prototype chains for maximum performance.
+asynchronous_programming:
+0 - 2 points: Using simple callback functions to perform asynchronous tasks, understanding the event loop.
+3 - 5 points: Working with promises and async/await to create more manageable asynchronous code.
+6 - 8 points: Creation of asynchronous systems, management of competitiveness and data flows.
+9 - 10 points: Designing high-load asynchronous architectures with reactive programming and data flow processing.
+closures:
+0 - 2 points: Understanding closures and using them to create stateful functions.
+3 - 5 points: Creating functions using closures to organize code and process data.
+6 - 8 points: Optimizing closures to improve performance and create reusable code.
+9 - 10 points: Designing complex architectures with closures, implementing safe and efficient systems using functional patterns.
+event_loop:
+0 - 2 points: Understanding the basics of the event loop, performing asynchronous tasks in JavaScript.
+3 - 5 points: Using setTimeout, setInterval, and event handlers to control asynchronous operations.
+6 - 8 points: Optimization of work with event loop, blocking prevention and management of large-scale operations.
+9 - 10 points: Create applications with high concurrency, configure and control event loop to improve performance.
+event_handling:
+0 - 2 points: Handling DOM events, using addEventListener to create interactive elements.
+3 - 5 points: Optimizing event handling using delegation and event management.
+6 - 8 points: Development of complex event management systems for large applications.
+9 - 10 points: Creating high-performance interfaces with advanced event management, minimizing CPU load.
+promises:
+0 - 2 points: Using Promise to perform asynchronous tasks, working with then and catch methods.
+3 - 5 points: Creating chains of promises and error handling, understanding all the states of promises.
+6 - 8 points: Optimization of the use of promises to manage complex asynchronous operations.
+9 - 10 points: Design of scalable asynchronous systems with integrated use of promises, management of large data flows.
+dom_manipulation:
+0 - 2 points: Creating and modifying DOM elements using methods such as getElementById and querySelector.
+3 - 5 points: Optimization of DOM manipulations to improve performance, work with dynamic elements.
+6 - 8 points: Manage the virtual DOM to create high-performance applications.
+9 - 10 points: Designing complex user interfaces minimizing direct DOM manipulation and using effective approaches.
+error_handling:
+0 - 2 points: Using try, catch to handle exceptions, understanding the main types of errors.
+3 - 5 points: Creating custom errors, logging and error handling to improve the user experience.
+6 - 8 points: Integration of error handling systems with logging and monitoring.
+9 - 10 points: Create scalable exception management architectures that are resilient to failures and real-time error handling.
+modules:
+0 - 2 points: Creating simple modules using export and import to organize the code.
+3 - 5 points: Working with various module systems (CommonJS, AMD, ES6), optimizing the modular structure.
+6 - 8 points: Creation of scalable architectures using modules, integration with build tools.
+9 - 10 points: Design and development of complex modular systems, optimization of module loading and performance for large applications.
+functional_programming:
+0 - 2 points: Understanding the basics of functional programming, using higher-order functions.
+3 - 5 points: Using closures, function composition, and call chains to build flexible code.
+6 - 8 points: Architecture development using the principles of functional programming, the use of immutable data structures.
+9 - 10 points: Creating scalable and efficient systems using advanced functional programming concepts such as monads and currying.

@@ -1,0 +1,51 @@
+Evaluation hints for language rust
+ownership_and_borrowing:
+0 - 2 points: Understanding the concepts of ownership and borrowing, the basics of using links and borrowings.
+3 - 5 points: Effective link management, working with immutable and mutable links, and understanding the lifetime of variables.
+6 - 8 points: Designing complex ownership models, deep reference usage to optimize memory usage.
+9 - 10 points: Creating secure and high-performance systems with precise lifetime management and resource ownership.
+error_handling_with_result_and_option:
+0 - 2 points: Using Result and Option types to handle errors and missing values.
+3 - 5 points: Ability to work with call chains when handling errors, creating custom error types.
+6 - 8 points: Development of reliable error handling systems using complex match expressions and unwrap_or_else.
+9 - 10 points: Designing error-resistant systems, integrating reliable error handling with advanced patterns.
+concurrency_and_parallelism:
+0 - 2 points: Understanding the basics of multithreading and working with threads in Rust.
+3 - 5 points: Using std::thread and std::sync to create and manage multithreaded tasks.
+6 - 8 points: Optimization of multithreaded applications using asynchronous threads and synchronization.
+9 - 10 points: Designing high-performance parallel systems, minimizing locks and improving thread safety.
+memory_safety_and_lifetimes:
+0 - 2 points: Understanding the basic concepts of memory security and lifetime in Rust.
+3 - 5 points: Managing link lifetime, working with borrowings and data slices.
+6 - 8 points: Creating complex data structures with secure time boundaries and managing lifetime in large systems.
+9 - 10 points: Application development with optimized memory and lifetime security for high-load systems.
+traits_and_generics:
+0 - 2 points: The basics of using generalizations and the implementation of simple traits for code abstraction.
+3 - 5 points: Creating complex traits with associated types and generalized functions for reusable code.
+6 - 8 points: Designing systems using generalizations and traits, optimizing types for performance.
+9 - 10 points: Creating highly adaptive APIs using generalizations and traits, maximizing performance while maintaining typical security.
+async_programming:
+0 - 2 points: Creating simple asynchronous functions using async/await.
+3 - 5 points: Working with futures, using the tokio library to manage asynchronous tasks.
+6 - 8 points: Development of complex asynchronous systems, integration with multithreaded and parallel tasks.
+9 - 10 points: Designing high-load asynchronous applications with high performance and low latency.
+macros_and_metaprogramming:
+0 - 2 points: Using simple macros like println! and the creation of basic macros.
+3 - 5 points: Creating and configuring procedural macros to automate template code.
+6 - 8 points: Designing complex macros for dynamic code generation and performance improvement.
+9 - 10 points: Performance optimization through metaprogramming, creation of powerful tools for large-scale systems.
+smart_pointers:
+0 - 2 points: Understanding the basics of smart pointers like Box and Rc for memory management.
+3 - 5 points: Working with Arc for multithreaded access, using RefCell for internal mutability.
+6 - 8 points: Creating complex structures with secure memory management, optimizing the use of smart pointers.
+9 - 10 points: Designing systems with highly efficient resource management, safe use of smart pointers in parallel tasks.
+ffi_and_interfacing_with_other_languages:
+0 - 2 points: Basics of interacting with external libraries using the Foreign Function Interface (FFI).
+3 - 5 points: Integration with C libraries and work with insecure code to manage external functions.
+6 - 8 points: Development of flexible interfaces for secure interaction with other languages, data security management.
+9 - 10 points: Designing and implementing complex cross-language interfaces, ensuring security and performance when working with external libraries.
+testing_and_benchmarking:
+0 - 2 points: Creating simple tests using assert and writing basic unit tests.
+3 - 5 points: Using a testing library such as cargo test, creating benchmarks to measure performance.
+6 - 8 points: Integration of testing and benchmarking into CI/CD pipelines, ensuring the stability of large projects.
+9 - 10 points: Creating comprehensive test frameworks, developing a performance testing strategy for mission-critical applications.

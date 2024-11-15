@@ -1,0 +1,51 @@
+Evaluation hints for language python
+data_types_and_structures:
+0 - 2 points: Understanding basic data types such as strings, lists, tuples, sets, and dictionaries.
+3 - 5 points: Efficient use of built-in data structures, including list comprehension and dictionary expressions.
+6 - 8 points: Optimizing the use of data structures to improve performance, working with big data.
+9 - 10 points: Design and implementation of complex data structures, customization of embedded structures for specific tasks.
+object_oriented_programming:
+0 - 2 points: Creating classes and objects, understanding the basics of encapsulation, inheritance, and polymorphism.
+3 - 5 points: Using special methods (magic methods), working with inheritance and abstract classes.
+6 - 8 points: Designing scalable OOP systems, applying design patterns and metaclasses.
+9 - 10 points: Development of architectures using OOP for large applications, creation of flexible and extensible libraries.
+error_handling:
+0 - 2 points: Using try, except for basic exception handling, understanding error types.
+3 - 5 points: Creating your own exceptions, improving the error handling strategy, including finally and else blocks.
+6 - 8 points: Integration of complex error handling strategies with logging and monitoring.
+9 - 10 points: Development of error-resistant systems with full logging and exception handling, setting up a comprehensive error management strategy.
+file_handling:
+0 - 2 points: Reading and writing files, using the open and close functions, working with text files.
+3 - 5 points: Using context managers to work with files, working with binary files and JSON.
+6 - 8 points: Optimization of reading and writing for large files, processing of multiple file formats.
+9 - 10 points: Designing systems for working with files in large applications, optimizing I/O and creating reliable data processing methods.
+web_scraping:
+0 - 2 points: Using the BeautifulSoup library to extract data from simple web pages.
+3 - 5 points: Working with requests to make HTTP requests, processing dynamic content with Selenium.
+6 - 8 points: Optimization and parallelization of scraping, bypassing locks and using user agents.
+9 - 10 points: Creating high-performance scraping systems, working with APIs and parsing large amounts of data.
+data_analysis:
+0 - 2 points: Using pandas and numpy libraries for basic data analysis, working with DataFrame.
+3 - 5 points: Data analysis using complex operations and aggregates, visualization with matplotlib.
+6 - 8 points: Create advanced analytical reports, work with large datasets, optimize performance.
+9 - 10 points: Development of scalable analytical systems, integration with databases, optimization for working with large amounts of data.
+concurrency_and_multithreading:
+0 - 2 points: Creating multithreaded applications using threading, managing simple tasks.
+3 - 5 points: Using concurrent.futures to manage a thread pool, using asynchronous programming.
+6 - 8 points: Creating scalable multithreaded and asynchronous applications, using asyncio and multiprocessing.
+9 - 10 points: Optimization of multithreaded systems for high performance, design of fault-tolerant systems with concurrency support.
+testing_and_debugging:
+0 - 2 points: Writing simple tests using unittest, debugging code using print.
+3 - 5 points: Using pytest and mock to create complex tests, working with a debugger.
+6 - 8 points: Integration of tests into CI/CD, creation of reliable test scenarios for large projects.
+9 - 10 points: Creation and support of test frameworks for large systems, setting up automated testing and ensuring reliability.
+web_frameworks:
+0 - 2 points: Create simple web applications using Flask or Django.
+3 - 5 points: Working with ORM, configuring routing and templates, creating a REST API.
+6 - 8 points: Creation of complex web applications with custom middleware, performance optimization.
+9 - 10 points: Design and development of high-load web applications with full architecture and security configuration.
+machine_learning_basics:
+0 - 2 points: Understanding the basics of machine learning, using scikit-learn for simple models.
+3 - 5 points: Creating and configuring models, working with data for training and testing.
+6 - 8 points: Optimization of models to improve accuracy, working with large datasets.
+9 - 10 points: Designing and implementing complex machine learning models, setting up infrastructure for big data.

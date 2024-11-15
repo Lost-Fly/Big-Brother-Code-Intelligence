@@ -1,0 +1,46 @@
+{
+  "type": "object",
+  "title": "",
+  "languageCompetencies": {
+    "garbage_collection_understanding": {
+      "evaluation": 0
+    },
+    "asynchronous_programming": {
+      "evaluation": 0
+    },
+    "delegates_and_events": {
+      "evaluation": 0
+    },
+    "linq_queries": {
+      "evaluation": 0
+    },
+    "understanding_csharp_type_system": {
+      "evaluation": 0
+    },
+    "generics": {
+      "evaluation": 0
+    },
+    "exception_handling": {
+      "evaluation": 0
+    },
+    "unsafe_code_and_pointers": {
+      "evaluation": 0
+    },
+    "extension_methods": {
+      "evaluation": 0
+    },
+    "api_usage": {
+      "evaluation": 0
+    }
+  },
+  "algorithmSkills": {
+    "evaluation": 0
+  },
+  "dbSkills": {
+    "evaluation": 0
+  },
+  "brokerSkills": {
+    "evaluation": 0
+  },
+  "summary": ""
+}

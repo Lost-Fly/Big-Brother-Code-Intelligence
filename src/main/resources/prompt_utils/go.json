@@ -1,0 +1,46 @@
+{
+  "type": "object",
+  "title": "",
+  "languageCompetencies": {
+    "concurrency": {
+      "evaluation": 0
+    },
+    "channel_management": {
+      "evaluation": 0
+    },
+    "error_handling": {
+      "evaluation": 0
+    },
+    "interfaces_and_type_embeddings": {
+      "evaluation": 0
+    },
+    "memory_management": {
+      "evaluation": 0
+    },
+    "understanding_go_runtime": {
+      "evaluation": 0
+    },
+    "logging": {
+      "evaluation": 0
+    },
+    "defer_usage": {
+      "evaluation": 0
+    },
+    "reflection_with_reflect": {
+      "evaluation": 0
+    },
+    "testing_and_benchmarking": {
+      "evaluation": 0
+    }
+  },
+  "algorithmSkills": {
+    "evaluation": 0
+  },
+  "dbSkills": {
+    "evaluation": 0
+  },
+  "brokerSkills": {
+    "evaluation": 0
+  },
+  "summary": ""
+}

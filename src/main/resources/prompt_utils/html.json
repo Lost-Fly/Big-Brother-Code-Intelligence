@@ -1,0 +1,49 @@
+{
+  "type": "object",
+  "title": "",
+  "languageCompetencies": {
+    "semantic_html": {
+      "evaluation": 0
+    },
+    "accessibility_standards": {
+      "evaluation": 0
+    },
+    "html5_apis": {
+      "evaluation": 0
+    },
+    "forms": {
+      "evaluation": 0
+    },
+    "validation": {
+      "evaluation": 0
+    },
+    "document_structure": {
+      "evaluation": 0
+    },
+    "layout": {
+      "evaluation": 0
+    },
+    "multimedia_embedding": {
+      "evaluation": 0
+    },
+    "web_storage_api": {
+      "evaluation": 0
+    },
+    "microdata_and_rich_snippets": {
+      "evaluation": 0
+    },
+    "web_components": {
+      "evaluation": 0
+    }
+  },
+  "algorithmSkills": {
+    "evaluation": 0
+  },
+  "dbSkills": {
+    "evaluation": 0
+  },
+  "brokerSkills": {
+    "evaluation": 0
+  },
+  "summary": ""
+}

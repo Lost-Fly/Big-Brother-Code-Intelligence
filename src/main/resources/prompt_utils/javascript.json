@@ -1,0 +1,43 @@
+{
+  "type": "object",
+  "title": "",
+  "languageCompetencies": {
+    "prototypal_inheritance": {
+      "evaluation": 0
+    },
+    "asynchronous_programming": {
+      "evaluation": 0
+    },
+    "closures_and_scope_management": {
+      "evaluation": 0
+    },
+    "dom_manipulation": {
+      "evaluation": 0
+    },
+    "error_handling": {
+      "evaluation": 0
+    },
+    "react_knowledge": {
+      "evaluation": 0
+    },
+    "vue_knowledge": {
+      "evaluation": 0
+    },
+    "angular_knowledge": {
+      "evaluation": 0
+    },
+    "higher_order_functions": {
+      "evaluation": 0
+    }
+  },
+  "algorithmSkills": {
+    "evaluation": 0
+  },
+  "dbSkills": {
+    "evaluation": 0
+  },
+  "brokerSkills": {
+    "evaluation": 0
+  },
+  "summary": ""
+}

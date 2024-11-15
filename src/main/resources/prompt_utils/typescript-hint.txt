@@ -1,0 +1,51 @@
+Evaluation hints for language typescript
+type_system:
+0 - 2 points: Using basic TypeScript types such as string, number, boolean, and arrays.
+3 - 5 points: Creating complex types, using union and intersection types to describe flexible data structures.
+6 - 8 points: Designing types using conditional types and mapped types, configuring types for large applications.
+9 - 10 points: Development of complex systems with deep type tuning, maximizing typical security and using dependent types for mission-critical applications.
+interfaces_and_type_aliases:
+0 - 2 points: Creating simple interfaces and type aliases for organizing code.
+3 - 5 points: Using interfaces to describe objects, applying interface extensions and compositions.
+6 - 8 points: Designing complex interfaces with inheritance and combination, optimizing interfaces for scalability.
+9 - 10 points: Development of modular systems with advanced use of interfaces, creation of flexible APIs using interfaces and type aliases.
+generics:
+0 - 2 points: Using basic generalizations to create common functions and classes.
+3 - 5 points: Creating generic types with constraints to support generic security.
+6 - 8 points: Development of complex generalized structures and algorithms, optimization to increase flexibility and performance.
+9 - 10 points: Designing universal APIs using generalizations, maximizing flexibility and typical security in large-scale systems.
+modules_and_namespaces:
+0 - 2 points: Using modules to organize code, import and export basic components.
+3 - 5 points: Creating multi-module projects, using namespaces to manage the scope.
+6 - 8 points: Optimization of modular architecture, creation of modular systems with high scalability.
+9 - 10 points: Designing large systems with a flexible modular structure, integrating with external libraries and configuring the scope for large teams.
+decorators:
+0 - 2 points: Understanding the concept of decorators and their basic use in classes.
+3 - 5 points: Create and configure custom decorators for methods and properties.
+6 - 8 points: Development of complex decorators to encapsulate logic and improve code readability.
+9 - 10 points: Creating scalable systems using advanced decorators, improving the code structure for large applications.
+async_programming:
+0 - 2 points: Using async and await to perform asynchronous tasks, working with promises.
+3 - 5 points: Creating complex chains of promises, error management in asynchronous code.
+6 - 8 points: Designing asynchronous systems using advanced patterns to improve performance.
+9 - 10 points: Creating high-load asynchronous applications with data flow processing and complex asynchronous operations.
+error_handling:
+0 - 2 points: Using try-catch to handle TypeScript errors.
+3 - 5 points: Creating your own error types, managing complex error chains.
+6 - 8 points: Develop strategies for sustainable error management in large applications.
+9 - 10 points: Designing error-resistant systems, setting up monitoring and logging for continuous quality support.
+type_inference_and_assertions:
+0 - 2 points: Understanding and using the type inference mechanism, using type assertions.
+3 - 5 points: Effective use of type inference to improve readability and simplify code.
+6 - 8 points: Creating complex types with deep inference, minimizing redundant type statements.
+9 - 10 points: Development of large systems with maximum use of type inference, minimizing typical conflicts and improving security.
+react_and_jsx_integration:
+0 - 2 points: Creating simple React components using TypeScript and JSX.
+3 - 5 points: Configuring types for props and state, creating interfaces for managing components.
+6 - 8 points: Development of complex and dynamic interfaces with full standard control.
+9 - 10 points: Create scalable applications using React and TypeScript, optimize components and maximize typical security.
+testing_and_tooling:
+0 - 2 points: Using Jest or Mocha for basic testing of functions and components.
+3 - 5 points: Creating more complex tests using MOCs and stabs, setting up a test environment.
+6 - 8 points: Integration of tests into CI/CD, development of testing strategies to ensure quality.
+9 - 10 points: Designing comprehensive test frameworks for large projects, ensuring reliability and scalability of testing.

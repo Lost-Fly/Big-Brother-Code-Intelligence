@@ -1,0 +1,25 @@
+{
+  "type": "object",
+  "title": "",
+  "languageCompetencies": {
+    "language_syntax_knowledge": {
+      "evaluation": 0
+    },
+    "code_optimization": {
+      "evaluation": 0
+    },
+    "consistent_naming_conventions": {
+      "evaluation": 0
+    }
+  },
+  "algorithmSkills": {
+    "evaluation": 0
+  },
+  "dbSkills": {
+    "evaluation": 0
+  },
+  "brokerSkills": {
+    "evaluation": 0
+  },
+  "summary": ""
+}

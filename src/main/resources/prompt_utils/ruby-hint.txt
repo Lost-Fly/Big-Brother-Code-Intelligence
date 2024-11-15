@@ -1,0 +1,51 @@
+Evaluation hints for language ruby
+object_oriented_programming:
+0 - 2 points: Understanding the basics of OOP, creating classes, objects and methods.
+3 - 5 points: Using inheritance, modules, and mixins to organize code.
+6 - 8 points: Designing scalable architectures using design patterns and dynamic polymorphism.
+9 - 10 points: Creating complex systems using metaprogramming to create flexible and adaptive architectures.
+metaprogramming:
+0 - 2 points: Using basic metaprogramming methods such as define_method and method_missing.
+3 - 5 points: Creating dynamic methods and working with hook methods to extend functionality.
+6 - 8 points: Development of libraries with active use of metaprogramming to simplify the code and increase its flexibility.
+9 - 10 points: Optimization of code performance and readability, deep use of metaprogramming to create scalable solutions.
+blocks_procs_and_lambdas:
+0 - 2 points: Understanding and creating blocks, passing blocks to methods.
+3 - 5 points: Using procs and lambdas to create flexible functions and manage the execution context.
+6 - 8 points: Optimize the use of blocks and lambdas to improve performance and improve code readability.
+9 - 10 points: Architecture design using blocks and lambdas to create high-level APIs and improve modularity.
+error_handling:
+0 - 2 points: Using begin, rescue for basic error handling.
+3 - 5 points: Creating custom exceptions, managing error propagation, and logging.
+6 - 8 points: Integration with logging and monitoring systems, error handling in multi-module applications.
+9 - 10 points: Designing a comprehensive error management system with fault tolerance and complete exception handling.
+enumerable_and_enumerator:
+0 - 2 points: Using methods from the Enumerable module, such as each and map.
+3 - 5 points: Applying more complex methods such as select, reject and inject to process data.
+6 - 8 points: Creating custom classes using Enumerable and optimizing iteration chains.
+9 - 10 points: Designing highly efficient data processors using Enumerator, supporting scalability and high performance.
+file_handling:
+0 - 2 points: Reading and writing files using File methods.
+3 - 5 points: Using context managers to work safely with files, processing large files.
+6 - 8 points: I/O optimization for large amounts of data, working with non-standard file formats.
+9 - 10 points: Creation of high-performance systems for working with files, support for parallel processing and distributed data storage.
+rails_framework:
+0 - 2 points: Creating basic web applications using Rails, creating models and controllers.
+3 - 5 points: Working with migrations, configuring routing and creating a RESTful API.
+6 - 8 points: Optimizing application performance, using complex associations and creating non-standard routes.
+9 - 10 points: Designing high-load applications on Rails, creating complex systems with full customization and scalability.
+testing_with_rspec:
+0 - 2 points: Writing basic tests using RSpec to test methods and models.
+3 - 5 points: Using mockups, stabs, and tests using parameters for more detailed tests.
+6 - 8 points: Development of comprehensive test suites for applications, integration with CI/CD.
+9 - 10 points: Creation and support of a test framework for large-scale applications, ensuring high code reliability.
+database_interaction_with_active_record:
+0 - 2 points: Performing basic CRUD operations using Active Record.
+3 - 5 points: Query optimization, working with associations and migrations.
+6 - 8 points: Create complex queries, manage transactions, and set up indexes.
+9 - 10 points: Designing efficient database schemas, configuring a scalable structure, and working with large amounts of data.
+gem_creation_and_dependency_management:
+0 - 2 points: Creating simple gems, understanding the basics of dependency management.
+3 - 5 points: Creating gems with configuration and dependencies, versioning support.
+6 - 8 points: Optimization and support of your own gems, working with dependencies for large projects.
+9 - 10 points: Create reliable gems for large projects, configure complex dependencies, and support scalability.

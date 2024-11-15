@@ -1,0 +1,51 @@
+Evaluation hints for language c
+pointer_arithmetic:
+0 - 2 points: Understanding basic pointer operations such as declaration, assignment, and dereference.
+3 - 5 points: The ability to perform arithmetic with pointers, work with pointers to complex data structures and understand the relationships between pointers.
+6 - 8 points: Efficient dynamic memory management, optimizing pointer usage to improve performance and ensure pointer safety.
+9 - 10 points: Masterful pointer management to achieve high performance, prevent memory leaks and crashes, and safely use pointers in complex applications.
+memory_management:
+0 - 2 points: Understanding the basic operations of dynamic memory allocation using malloc and free.
+3 - 5 points: Optimize memory usage, avoid memory leaks, and use tools like Valgrind to debug memory.
+6 - 8 points: Development and use of custom memory allocators, optimization of memory usage patterns to improve performance.
+9 - 10 points: Creating effective memory management strategies for high-load applications, minimizing resource usage and completely eliminating memory errors.
+preprocessor_macros:
+0 - 2 points: Basic knowledge of preprocessor directives such as #define, #include and #ifdef.
+3 - 5 points: Creating macros for code abstraction, conditional compilation, and implementation of macro functions.
+6 - 8 points: Designing complex macros, avoiding common macro problems, and using them to improve code portability and maintainability.
+9 - 10 points: Expert knowledge of macros, creation of cross-platform code that includes macros for highly efficient and scalable applications.
+manual_resource_management:
+0 - 2 points: Understanding the principles of allocating and freeing resources such as files and network connections.
+3 - 5 points: Implementation of correct resource management to prevent leaks in various scenarios.
+6 - 8 points: Development and implementation of resource management strategies using the RAII pattern and leak prevention in multitasking applications.
+9 - 10 points: Full control over resource management, including complex multithreaded applications and automated leak checks.
+understanding_standard_library:
+0 - 2 points: Basic knowledge of the functions of the C standard library for input/output and string processing.
+3 - 5 points: Using advanced library functions, understanding its features and applying it to optimize code.
+6 - 8 points: Expert use of the standard library to improve performance and expand its functionality for application tasks.
+9 - 10 points: Modification and customization of the standard library for specific tasks and participation in the development of the standard library.
+buffer_overflow_prevention:
+0 - 2 points: Awareness of buffer overflow vulnerabilities and identification of simple overflow cases.
+3 - 5 points: Implementation of buffer overflow protection, including boundary checking and the use of protected functions.
+6 - 8 points: Designing systems with comprehensive buffer overflow protection, conducting code security audits.
+9 - 10 points: Using techniques such as ASLR and DEP to ensure application security and prevent buffer overflow attacks.
+bitwise_operations:
+0 - 2 points: Understanding basic bitwise operations such as AND, OR, XOR, NOT and bitwise shift.
+3 - 5 points: Using bit operations for flags, masks, and low-level data processing.
+6 - 8 points: Code optimization using bitwise operations and implementation of complex algorithms that require bitwise processing.
+9 - 10 points: Mastery of bitwise operations to maximize performance in mission-critical tasks and optimize memory usage.
+inline_assembly:
+0 - 2 points: Knowledge of inline assembly syntax and the ability to insert simple instructions into C code.
+3 - 5 points: Assembler integration for code optimization, management of calling conventions and data transfer between C and assembler.
+6 - 8 points: Professional code writing using sophisticated inline assembly to optimize critical areas.
+9 - 10 points: Creating portable and maintainable code with the integration of complex assembly functions for specialized tasks.
+file_io:
+0 - 2 points: Performing basic file operations such as opening, reading, writing, and closing.
+3 - 5 points: Working with different file modes, error handling when working with files and manipulating file pointers.
+6 - 8 points: Creation of efficient I/O systems, development of custom file processing mechanisms.
+9 - 10 points: Optimize file access, manage large datasets, and create reliable file processing systems for applications.
+signal_handling:
+0 - 2 points: Understanding the concept of signals and managing simple signals using handlers.
+3 - 5 points: Working with multiple signals, implementing reliable signal processing strategies and using handlers safely.
+6 - 8 points: Development of integrated signal management systems, competent processing of asynchronous events.
+9 - 10 points: Integration of signal processing into multitasking and distributed applications to improve system stability.

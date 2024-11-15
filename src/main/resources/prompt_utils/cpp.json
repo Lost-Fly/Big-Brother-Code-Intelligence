@@ -1,0 +1,40 @@
+{
+  "type": "object",
+  "title": "",
+  "languageCompetencies": {
+    "object_oriented_programming": {
+      "evaluation": 0
+    },
+    "template_programming": {
+      "evaluation": 0
+    },
+    "memory_management_with_pointers": {
+      "evaluation": 0
+    },
+    "understanding_standard_template_library": {
+      "evaluation": 0
+    },
+    "move_semantics_and_rvalue_references": {
+      "evaluation": 0
+    },
+    "exception_safety": {
+      "evaluation": 0
+    },
+    "multiple_inheritance": {
+      "evaluation": 0
+    },
+    "virtual_functions": {
+      "evaluation": 0
+    }
+  },
+  "algorithmSkills": {
+    "evaluation": 0
+  },
+  "dbSkills": {
+    "evaluation": 0
+  },
+  "brokerSkills": {
+    "evaluation": 0
+  },
+  "summary": ""
+}

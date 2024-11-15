@@ -1,0 +1,41 @@
+Evaluation hints for language c++
+object_oriented_programming:
+0 - 2 points: Understanding basic OOP concepts such as classes, objects, inheritance, encapsulation, and polymorphism.
+3 - 5 points: Designing and implementing complex class hierarchies, using access specifiers, and applying SOLID principles.
+6 - 8 points: Creating scalable systems using advanced OOP patterns, ensuring code reuse and maintainability.
+9 - 10 points: Architecture of large systems using OOP to solve complex problems, application of modern design practices and ensuring code flexibility.
+template_programming:
+0 - 2 points: Knowledge of syntax and easy use of templates for functions and classes.
+3 - 5 points: Creating template specializations, understanding the output of template parameters, and implementing common programming techniques.
+6 - 8 points: Designing complex template solutions, optimizing calculations at the compilation stage and using functions such as variable templates.
+9 - 10 points: Creating high-performance libraries using template metaprogramming, using templates for flexibility and efficiency of large applications.
+memory_management_with_pointers:
+0 - 2 points: Understanding basic pointer operations: declaration, initialization, dereference, and simple pointer arithmetic.
+3 - 5 points: Effective management of dynamic memory allocation and release, the use of pointers to work with complex data structures.
+6 - 8 points: Ownership of smart pointers (std::unique_ptr, std::shared_ptr), development of custom memory management strategies.
+9 - 10 points: Optimization of memory usage, design of algorithms for resources with limited capabilities and complex models of memory ownership in performance-critical applications.
+understanding_standard_template_library:
+0 - 2 points: Basic knowledge of STL components such as vectors, lists, maps, and basic algorithms such as sorting and searching.
+3 - 5 points: Using more complex STL functions, including iterators, lambda expressions and advanced algorithms to work efficiently with data.
+6 - 8 points: Deep knowledge of STL, optimization of STL usage for high-performance applications, creation of custom containers.
+9 - 10 points: STL extension for specialized needs, development and optimization of proprietary components for integration with STL in large projects.
+move_semantics_and_rvalue_references:
+0 - 2 points: Understanding the concepts of lvalue and rvalue, implementing simple constructors and move operators.
+3 - 5 points: Effective use of std::move, understanding the impact of move semantics on resource management.
+6 - 8 points: Creating classes with full support for rvalue references, optimizing code to minimize copying.
+9 - 10 points: Create high-performance applications using displacement semantics to maximize efficiency and save resources.
+exception_safety:
+0 - 2 points: Knowledge of basic exception handling using try, catch and throw to manage errors at runtime.
+3 - 5 points: Implementing robust error handling strategies, using RAII to clean up resources, and writing crash-resistant exceptions.
+6 - 8 points: Ensuring the implementation of strict exception handling guarantees (basic, strong, no-throw), integration of error handling into complex projects.
+9 - 10 points: Development and implementation of integrated approaches to exception handling for large-scale systems, minimizing the consequences of errors and increasing the stability of applications.
+multiple_inheritance:
+0 - 2 points: Understanding syntax and the main use cases of multiple inheritance in C++.
+3 - 5 points: Managing the complexities of multiple inheritance, such as the diamond-shaped inheritance problem, and making effective use of virtual inheritance.
+6 - 8 points: Designing class hierarchies using multiple inheritance for code reuse, implementing interfaces with abstract base classes.
+9 - 10 points: Creating scalable architectures using multiple inheritance to create flexible and extensible software systems.
+virtual_functions:
+0 - 2 points: Understanding the concept of virtual functions and the ability to declare and redefine them in derived classes.
+3 - 5 points: Using virtual functions to achieve polymorphism, implementing abstract classes and managing virtual tables.
+6 - 8 points: Optimization of polymorphic systems, designing abstractions using virtual functions and understanding their impact on performance.
+9 - 10 points: Application of advanced techniques to create flexible and extensible architectures, minimizing the overhead of virtual calls in high-load systems.

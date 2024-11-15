@@ -1,0 +1,51 @@
+Evaluation hints for language scala
+functional_programming_principles:
+0 - 2 points: Understanding the basics of functional programming, such as pure functions, immutability, and first-class expressions.
+3 - 5 points: Using more complex functional concepts such as higher-order functions and closures.
+6 - 8 points: Applying functional patterns such as monads and functors to create clean and repeatable code.
+9 - 10 points: Designing architectures with functional programming for scalable applications, optimizing for performance and readability.
+object_oriented_programming:
+0 - 2 points: Creating base classes and objects, understanding encapsulation and inheritance.
+3 - 5 points: Working with code modularity through traits and their composition, using polymorphism for flexibility.
+6 - 8 points: Optimization of OOP architecture, use of design patterns, creation of complex class hierarchies.
+9 - 10 points: Designing large systems using hybrid approaches combining OOP and functional programming.
+type_system_and_generics:
+0 - 2 points: Understanding the basics of typing, creating simple generalizations using parameterized types.
+3 - 5 points: Using type constraints, covariance, and contravariance to increase code flexibility.
+6 - 8 points: Creating complex generalized structures, optimizing the type system to improve security and performance.
+9 - 10 points: Designing and implementing scalable systems using the extended syntax of the type system, including dependent types and more complex patterns.
+concurrency_and_parallelism:
+0 - 2 points: Creating simple multithreaded programs using the concurrent standard library.
+3 - 5 points: Using Future and Promises to handle asynchronous tasks, work with data synchronization.
+6 - 8 points: Optimization of parallel tasks using Akka, creation of actors and message processing.
+9 - 10 points: Designing high-load systems with distributed processing, using clusters and supporting scalability.
+pattern_matching:
+0 - 2 points: Using pattern matching to process data with simple patterns.
+3 - 5 points: Using pattern matching for more complex data structures, using guard for conditions.
+6 - 8 points: Create complex templates with match for different data types, optimize performance.
+9 - 10 points: Development and support of large systems using pattern matching for accurate data processing and code simplification.
+collections_and_immutability:
+0 - 2 points: Using standard Scala collections such as List and Map, understanding their immutability.
+3 - 5 points: Optimizing work with collections, using structures such as Vector and Set to improve performance.
+6 - 8 points: Creating custom immutable collections, managing large amounts of data.
+9 - 10 points: Designing and using complex data structures to support high-performance and scalable applications.
+implicit_and_type_classes:
+0 - 2 points: Understanding and using simple implicit parameters and methods.
+3 - 5 points: Creating implicit conversions and using type classes to abstract types.
+6 - 8 points: Creating complex implicit dependencies, optimizing the type system using implicit transformations.
+9 - 10 points: Developing high-level abstractions, improving code readability and performance using implicit parameters and type classes.
+akka_framework:
+0 - 2 points: Creating simple actors using Akka, basic message processing.
+3 - 5 points: Creating complex actors, using templates such as supervision and router.
+6 - 8 points: Development of distributed systems using Akka clusters, management of actor states.
+9 - 10 points: Designing scalable actor-based systems, supporting high availability and system resilience.
+sbt_and_build_management:
+0 - 2 points: Using sbt to compile and run Scala projects, understanding basic commands.
+3 - 5 points: Setting up dependencies, creating custom tasks, and configuring configurations.
+6 - 8 points: Optimization of the build process, use of caching and creation of complex multi-module projects.
+9 - 10 points: Design and optimization of the build infrastructure for large projects, dependency management and CI/CD support.
+testing_with_scalatest:
+0 - 2 points: Writing simple tests using ScalaTest, checking basic functions and methods.
+3 - 5 points: Creating more complex tests using mockups and testing asynchronous code.
+6 - 8 points: ScalaTest integration into CI/CD, creation of comprehensive tests for unit and integration testing.
+9 - 10 points: Development and support of a test strategy for large projects, ensuring code coverage and maintaining stability.

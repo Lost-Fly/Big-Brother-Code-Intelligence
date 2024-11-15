@@ -1,0 +1,40 @@
+{
+  "type": "object",
+  "title": "",
+  "languageCompetencies": {
+    "generics_and_advanced_types": {
+      "evaluation": 0
+    },
+    "type_system_mastery": {
+      "evaluation": 0
+    },
+    "type_inference": {
+      "evaluation": 0
+    },
+    "union_and_intersection_types": {
+      "evaluation": 0
+    },
+    "decorators_usage": {
+      "evaluation": 0
+    },
+    "declaration_merging": {
+      "evaluation": 0
+    },
+    "conditional_types": {
+      "evaluation": 0
+    },
+    "mapped_types": {
+      "evaluation": 0
+    }
+  },
+  "algorithmSkills": {
+    "evaluation": 0
+  },
+  "dbSkills": {
+    "evaluation": 0
+  },
+  "brokerSkills": {
+    "evaluation": 0
+  },
+  "summary": ""
+}

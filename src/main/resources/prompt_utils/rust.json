@@ -1,0 +1,43 @@
+{
+  "type": "object",
+  "title": "",
+  "languageCompetencies": {
+    "ownership_and_borrowing": {
+      "evaluation": 0
+    },
+    "lifetimes": {
+      "evaluation": 0
+    },
+    "pattern_matching": {
+      "evaluation": 0
+    },
+    "concurrency_with_threads": {
+      "evaluation": 0
+    },
+    "error_handling": {
+      "evaluation": 0
+    },
+    "memory_safety": {
+      "evaluation": 0
+    },
+    "generics_and_traits": {
+      "evaluation": 0
+    },
+    "macro_rules_and_procedural_macros": {
+      "evaluation": 0
+    },
+    "understanding_rust_standard_library": {
+      "evaluation": 0
+    }
+  },
+  "algorithmSkills": {
+    "evaluation": 0
+  },
+  "dbSkills": {
+    "evaluation": 0
+  },
+  "brokerSkills": {
+    "evaluation": 0
+  },
+  "summary": ""
+}

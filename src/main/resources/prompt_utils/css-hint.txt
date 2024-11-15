@@ -1,0 +1,56 @@
+Evaluation hints for language css
+flexbox_and_grid_layouts:
+0 - 2 points: Understanding the basics of Flexbox and CSS Grid to create simple layouts, align elements, and define rows and columns.
+3 - 5 points: Create more complex and responsive layouts, use advanced properties for precise control, and integrate Flexbox and Grid into projects.
+6 - 8 points: Development of complex, highly responsive layouts, optimization of grid and flexible container performance, solving complex layout tasks.
+9 - 10 points: Designing interactive interfaces using advanced Flexbox and Grid techniques, creating scalable layouts for complex web applications.
+responsive_design_techniques:
+0 - 2 points: Knowledge of creating responsive layouts using relative units such as percentages and viewport units.
+3 - 5 points: The use of media queries to adapt the design to different screens, the use of flexible images and media.
+6 - 8 points: Development of adaptive designs with a 'mobile-first' approach, performance optimization for different devices.
+9 - 10 points: Creating complex interfaces with advanced responsive design techniques, providing functionality and aesthetics on all devices.
+selectors:
+0 - 2 points: Understanding basic CSS selectors such as elements, classes, and IDs.
+3 - 5 points: Using more complex selectors such as attributes, pseudo-classes, and pseudo-elements for precise targeting.
+6 - 8 points: Creating highly specific and effective selectors, avoiding style conflicts, and optimizing styles for large-scale projects.
+9 - 10 points: Develop style management strategies for large projects, minimize redundancy and maintain high CSS performance.
+specificity:
+0 - 2 points: Understanding the concept of CSS specificity and the influence of various selectors on the priority of styles.
+3 - 5 points: Managing and resolving specificity conflicts, maintaining a hierarchy of styles, and applying best practices.
+6 - 8 points: Deep understanding of specificity rules, strategic manipulation of style prioritization for code optimization.
+9 - 10 points: Creating a scalable CSS architecture, minimizing problems with specificity in large projects, maintaining cleanliness and clarity of styles.
+animations:
+0 - 2 points: Knowledge of creating simple animations using CSS keyframes, such as smooth transitions and shifts.
+3 - 5 points: Implementing more complex animations, managing time, delays, iterations, and using animation libraries.
+6 - 8 points: Designing high-performance animations, synchronizing with user interaction, optimizing for different devices.
+9 - 10 points: Create complex, dynamic animations with advanced techniques to attract attention and enhance the interactivity of interfaces.
+transitions:
+0 - 2 points: Understanding simple CSS transitions to smoothly change properties when interacting.
+3 - 5 points: Manage time functions, delays, and acceleration functions to create more graceful animations.
+6 - 8 points: Optimize the use of transitions to improve interaction, manage multiple transitions simultaneously.
+9 - 10 points: Create complex animation effects with high-quality transitions to enhance the user experience and interface performance.
+understanding_the_box_model:
+0 - 2 points: Understanding the basics of the CSS block model: content, margins, borders and margins.
+3 - 5 points: Effective use of box-sizing and property management for layout consistency.
+6 - 8 points: Creating complex and responsive layouts with an optimized block model, eliminating alignment problems.
+9 - 10 points: Development and optimization of complex components with a deep understanding of the block model for high-quality layout.
+positioning_and_z-index_management:
+0 - 2 points: Understanding basic positioning properties such as static, relative, absolute and fixed.
+3 - 5 points: Z-index control to control the order of elements overlay and create multi-layered layouts.
+6 - 8 points: Implementation of dynamic and interactive layouts using sophisticated z-index positioning and control.
+9 - 10 points: Design of complex multi-layered interfaces with optimized overlay and positioning control.
+css_inheritance_and_cascade:
+0 - 2 points: Understanding the principles of inheritance and cascading in CSS.
+3 - 5 points: Effective inheritance management, using a cascade to control the priority of styles and applying best practices.
+6 - 8 points: Deep understanding of inheritance and cascading to optimize CSS architecture.
+9 - 10 points: Create a scalable and efficient architecture, minimize style conflicts, and maintain inheritance predictability.
+media_queries:
+0 - 2 points: The ability to write simple media queries to change styles based on screen size.
+3 - 5 points: Creating multiple breakpoints, targeting different device characteristics, and responsive design using media queries.
+6 - 8 points: Creating flexible and adaptive layouts, using advanced media query techniques to optimize performance.
+9 - 10 points: Using advanced media queries and container feature requests to create highly adaptive interfaces.
+browser_compatibility_issues:
+0 - 2 points: Awareness of the main browser compatibility issues and the use of prefixes to eliminate them.
+3 - 5 points: Identifying and solving more complex compatibility issues, testing in different browsers, and implementing rollbacks for incompatible features.
+6 - 8 points: Deep knowledge of cross-browser compatibility and implementation of progressive improvement and graceful deterioration.
+9 - 10 points: Ensuring the stability and reliability of styles for all major browsers and platforms, monitoring browser standards updates.

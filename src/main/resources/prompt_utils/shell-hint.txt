@@ -1,0 +1,51 @@
+Evaluation hints for language shell
+command_line_proficiency:
+0 - 2 points: Understanding basic commands for navigating the file system, such as ls, cd, mkdir, rm.
+3 - 5 points: Using more complex commands and parameters to manage files and directories, using alias and command history.
+6 - 8 points: Optimization of command sequences, writing effective command chains to automate tasks.
+9 - 10 points: Creation of high-level utilities and automation of complex system tasks using shell scripts.
+shell_scripting:
+0 - 2 points: Creating simple scripts to perform basic tasks, using variables and simple conditional operators.
+3 - 5 points: Using loops, functions, and standard threads to build more complex scripts.
+6 - 8 points: Development of reliable and supported scripts that handle errors and support customization flexibility.
+9 - 10 points: Creation of scalable automated systems, integration with other tools and frameworks for management and monitoring.
+file_processing:
+0 - 2 points: Reading and writing data from files using cat, echo, editing using nano or vim.
+3 - 5 points: Processing text files using grep, sed, awk commands to search and replace data.
+6 - 8 points: Creating complex filters and data processing processes using awk and sed to process large files.
+9 - 10 points: Development of highly efficient data processing processes, automation of complex operations with files and data streams.
+text_processing:
+0 - 2 points: Using simple commands such as grep, cut, sort to process strings and text.
+3 - 5 points: Comprehensive data processing using awk and SED for text analysis and conversion.
+6 - 8 points: Create complex filters for data and optimize text processing for large files.
+9 - 10 points: Designing highly efficient solutions for analyzing and converting large amounts of text data.
+process_management:
+0 - 2 points: View and manage processes using the ps, top, kill commands.
+3 - 5 points: Using background/foreground processes, setting priorities and managing flows.
+6 - 8 points: Optimizing process management, using nohup and screen for long-term processes.
+9 - 10 points: Creating process monitoring and management systems, configuring processes for fault-tolerant and long-lived services.
+networking_commands:
+0 - 2 points: Using basic network commands such as ping, ifconfig, netstat to diagnose network connections.
+3 - 5 points: Work with advanced teams such as traceroute, dig, nslookup to analyze the network.
+6 - 8 points: Optimization of network processes and traffic analysis, working with iptables and network configuration.
+9 - 10 points: Creating network automations and configuring security, using scripts to monitor and configure network infrastructure.
+job_scheduling:
+0 - 2 points: Setting up simple cron tasks to automate repetitive actions.
+3 - 5 points: Creating and managing more complex cron tasks, using at for one-time tasks.
+6 - 8 points: Development of comprehensive task plans with cron, execution monitoring and logging.
+9 - 10 points: Designing automated task planning systems for scalable solutions, setting time frames and optimizing execution.
+environment_management:
+0 - 2 points: Working with environment variables, using the export and env commands.
+3 - 5 points: Setting up the environment for various scripts, managing paths and settings for automation.
+6 - 8 points: Creating and maintaining complex environment configurations, using profiles and startup scripts.
+9 - 10 points: Design of environment management systems for multi-user and multitasking systems, support for configuration consistency.
+version_control_integration:
+0 - 2 points: Using basic git commands to track and commit changes to projects.
+3 - 5 points: Integration of git commands into shell scripts to automate the workflow.
+6 - 8 points: Creating and maintaining complex pipelines with git, working with branching and merging in automated processes.
+9 - 10 points: Designing complex CI/CD processes with full git integration, providing automatic testing and deployment.
+automation_with_shell:
+0 - 2 points: Create simple scripts to automate basic tasks.
+3 - 5 points: Automate regular tasks and create custom utilities for everyday use.
+6 - 8 points: Create multifunctional utilities to support complex processes and automate large tasks.
+9 - 10 points: Designing reliable and scalable automation systems for managing large amounts of data and tasks.

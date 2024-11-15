@@ -1,0 +1,51 @@
+Evaluation hints for language bash
+bash_scripting_basics:
+0 - 2 points: Understanding basic bash concepts: creating and executing simple scripts, using shebang (#!) and configuring scripts for execution.
+3 - 5 points: Creating more complex scripts with loops, conditional statements, and basic text processing.
+6 - 8 points: Create reliable, efficient scripts that handle various edge cases, use the advanced features of bash and integrate with other system utilities.
+9 - 10 points: Expert knowledge of bash for creating large scripts with error handling, integration with external tools and building scalable solutions.
+variable_manipulation:
+0 - 2 points: Declaring, assigning, and using variables in bash scripts.
+3 - 5 points: Performing operations on variables, including concatenation, substitution, and arithmetic.
+6 - 8 points: Working with indirect references, arrays and associative arrays, using parametric extension for script flexibility.
+9 - 10 points: Create dynamic and flexible scripts with deep use of variables and arrays for optimization.
+control_structures:
+0 - 2 points: Working with basic control structures (if, for, while) to control the flow of script execution.
+3 - 5 points: Using more complex structures, including nested loops, case statements, and conditional expressions.
+6 - 8 points: Designing complex control flows, optimizing cycles to improve performance.
+9 - 10 points: Creation of complex control structures with optimization of logic and application of best practices of bash.
+command_substitution:
+0 - 2 points: Using command substitution to capture command results using backticks (`) or $(...).
+3 - 5 points: Effectively using command substitution to enhance the functionality of scripts.
+6 - 8 points: Create powerful, supported command substitution scripts that dynamically interact with system commands.
+9 - 10 points: Integrate command substitution with other bash methods to create highly efficient, dynamic scripts.
+input_and_output_redirection:
+0 - 2 points: Using redirection operators (> , <, >>) for standard input and output.
+3 - 5 points: Advanced redirection usage, including piping (|), standard error redirection (2>) and combined redirection.
+6 - 8 points: Managing complex redirection scenarios using here documents, process substitution, and file descriptors.
+9 - 10 points: Create flexible and complex I/O redirection scenarios to perform various high-performance tasks.
+function_definitions:
+0 - 2 points: Defining and calling simple functions in bash scripts to organize code.
+3 - 5 points: Creating functions with parameters, local variables, and return values to improve modularity.
+6 - 8 points: Development of complex functions with error handling, recursion and integration with other scripts.
+9 - 10 points: Create scalable bash applications with features that use advanced error handling and code structuring techniques.
+error_handling_and_exit_codes:
+0 - 2 points: Understanding and using exit codes to indicate the success or failure of commands.
+3 - 5 points: Implementation of error checking using conditional operators and careful management of common errors.
+6 - 8 points: Development of comprehensive error handling strategies using ladders to intercept signals and errors.
+9 - 10 points: Create reliable scripts with full error handling and crash recovery, including informative error messages.
+string_and_array_operations:
+0 - 2 points: Performing simple operations with strings and basic array management.
+3 - 5 points: Using advanced string operations such as matching, substitution and extraction, as well as array management.
+6 - 8 points: Creating complex string operations and managing multidimensional arrays for data processing.
+9 - 10 points: Optimize string and array processing to handle complex data and improve script efficiency.
+process_substitution:
+0 - 2 points: Knowledge of the basics of process substitution and its application in simple scenarios.
+3 - 5 points: Efficient use of process substitution to handle complex data flows in scripts.
+6 - 8 points: Creation of highly efficient scripts with parallel processing and data exchange between processes.
+9 - 10 points: Designing complex process substitution scenarios to support productive systems and multitasking.
+using_bash_builtin_commands:
+0 - 2 points: Knowledge of basic built-in bash commands such as echo, cd, pwd, export.
+3 - 5 points: Using a wide range of built-in commands and understanding their parameters to optimize script performance.
+6 - 8 points: Expert knowledge of built-in bash commands for writing reliable, productive scripts.
+9 - 10 points: Minimizing dependencies on external commands by making full use of the built-in bash commands.

@@ -1,0 +1,46 @@
+{
+  "type": "object",
+  "title": "",
+  "languageCompetencies": {
+    "optionals_and_unwrapping": {
+      "evaluation": 0
+    },
+    "protocol_oriented_programming": {
+      "evaluation": 0
+    },
+    "memory_management_with_arc": {
+      "evaluation": 0
+    },
+    "error_handling": {
+      "evaluation": 0
+    },
+    "generics_and_associated_types": {
+      "evaluation": 0
+    },
+    "closures_and_higher_order_functions": {
+      "evaluation": 0
+    },
+    "swift_standard_library": {
+      "evaluation": 0
+    },
+    "concurrency": {
+      "evaluation": 0
+    },
+    "enum_and_pattern_matching": {
+      "evaluation": 0
+    },
+    "structs_and_classes": {
+      "evaluation": 0
+    }
+  },
+  "algorithmSkills": {
+    "evaluation": 0
+  },
+  "dbSkills": {
+    "evaluation": 0
+  },
+  "brokerSkills": {
+    "evaluation": 0
+  },
+  "summary": ""
+}

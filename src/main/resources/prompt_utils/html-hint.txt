@@ -1,0 +1,51 @@
+Evaluation hints for language html
+semantic_html:
+0 - 2 points: Using basic semantic HTML tags such as header, footer, section and article to improve the structure of the page.
+3 - 5 points: Deep understanding of semantic markup to improve accessibility and SEO, creating more complex document structures.
+6 - 8 points: Optimization of HTML pages with an emphasis on SEO and accessibility, the use of advanced semantic elements to improve the perception of search engines.
+9 - 10 points: Designing complex, scalable HTML structures with full support for semantics, ensuring accessibility for users with special needs and compliance with SEO requirements.
+accessibility_standards:
+0 - 2 points: Understanding the basics of accessibility, such as using alternative texts for images and proper form markup.
+3 - 5 points: Applying WCAG standards, configuring keyboard interaction, using ARIA attributes to improve accessibility.
+6 - 8 points: Designing interfaces with full accessibility support, conducting accessibility audits and optimizing for users with disabilities.
+9 - 10 points: Creating highly accessible interfaces, performing accessibility testing, and ensuring that the application complies with international standards and accessibility guidelines.
+forms_and_validation:
+0 - 2 points: Creating simple forms using input, select and textarea, basic validation of fields.
+3 - 5 points: Creating complex forms, adding built-in validation with HTML5 attributes, using typed input fields.
+6 - 8 points: Implementation of custom validation and improvement of UX for forms, ensuring the correct operation of forms on different devices.
+9 - 10 points: Designing complex forms with dynamic components, integration with backend validation and ensuring data entry security.
+media_integration:
+0 - 2 points: Integration of images, video and audio into web pages using img, video and audio tags.
+3 - 5 points: Using attributes to control media behavior, working with controls and configuring adaptive images.
+6 - 8 points: Media optimization for fast loading, using lazy-loading methods, adaptive images with srcset and sizes.
+9 - 10 points: Development of comprehensive multimedia solutions for applications, the use of next-generation formats and dynamic change of media content depending on the network.
+html5_canvas:
+0 - 2 points: Creating simple graphic elements on canvas using JavaScript, drawing basic shapes.
+3 - 5 points: Creating interactive elements, using the canvas API for complex animation and data visualization.
+6 - 8 points: Canvas performance optimization for large animations, image manipulation and pixel manipulation.
+9 - 10 points: Designing interactive applications and games using canvas, implementing complex graphical solutions for web applications.
+tables:
+0 - 2 points: Creating basic tables with the tags table, tr, th and td to display data.
+3 - 5 points: Customize table styles, control cell alignment and sizes, create headings and subheadings.
+6 - 8 points: Designing adaptive tables with sorting and filtering support, improving the readability and accessibility of data in tables.
+9 - 10 points: Creating complex and interactive tables for dynamic data, implementing functions for managing large amounts of data and optimizing them.
+iframes_and_embedded_content:
+0 - 2 points: Integration of external content using the iframe tag to insert videos, maps, and other content.
+3 - 5 points: Configuring security attributes and controlling the size and scrolling of the iframe, using responsive iframes.
+6 - 8 points: Optimization of embedding for performance and security, interaction with iframe content via postMessage.
+9 - 10 points: Development of sophisticated content embedding solutions using APIs to integrate high-performance external content.
+meta_tags_and_seo:
+0 - 2 points: Using basic meta tags such as title, meta description, keywords to improve SEO.
+3 - 5 points: Setting up additional meta tags for social networks (Open Graph, Twitter Card), using canonical URLs.
+6 - 8 points: Designing a page with full SEO optimization, using structured data to increase visibility.
+9 - 10 points: Create highly optimized pages for SEO using advanced meta tags, micro markup, and dynamic meta data updates.
+doctype_and_html_structure:
+0 - 2 points: Understanding the basics of the HTML document structure, including the use of the doctype tag and the basic head and body tags.
+3 - 5 points: Optimizing the HTML structure to meet standards, using head elements to improve productivity and SEO.
+6 - 8 points: Development of scalable HTML structures for large applications, organization and optimization of code.
+9 - 10 points: Creating modular HTML structures that meet modern standards for complex and productive web applications.
+microdata_and_schema:
+0 - 2 points: Understanding the basics of micro-markup to improve data presentation, using simple itemprop and itemscope attributes.
+3 - 5 points: Integration of micro-markup Schema.org to improve SEO, data structuring to support advanced search results.
+6 - 8 points: Optimization of micro markup to represent complex data, improved visibility in search engines.
+9 - 10 points: Using advanced micro markup structures to fully integrate data with search engines and improve the user experience.

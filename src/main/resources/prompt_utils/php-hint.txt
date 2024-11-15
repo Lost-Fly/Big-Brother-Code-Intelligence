@@ -1,0 +1,51 @@
+Evaluation hints for language php
+error_handling:
+0 - 2 points: Using basic error handling such as try-catch blocks to prevent failures and simple error logging.
+3 - 5 points: Create custom exceptions, manage error propagation through application layers, and use logging to improve debugging.
+6 - 8 points: Design and implementation of comprehensive error handling strategies based on performance and reliability, integration with monitoring systems.
+9 - 10 points: Optimization of error handling strategies in large systems, creation of fault-tolerant applications with a distributed logging and recovery system.
+object_oriented_programming:
+0 - 2 points: Understanding the basics of OOP in PHP, creating simple classes and objects, inheritance and basic encapsulation.
+3 - 5 points: Using interfaces, abstract classes, and constructors to create more complex class hierarchies.
+6 - 8 points: Designing flexible and supported architectures using design patterns such as factory and loner.
+9 - 10 points: Creation of scalable object-oriented systems, integration with modern frameworks and performance optimization.
+database_interaction:
+0 - 2 points: Using PDO to connect to a database, perform basic SQL queries, and securely retrieve data.
+3 - 5 points: Optimization of SQL queries, use of prepared expressions and transaction management to improve security.
+6 - 8 points: Designing database schemas, creating reliable database interactions, maintaining data integrity and error tolerance.
+9 - 10 points: Configuring database clusters, designing distributed systems with high availability and scalability, managing large amounts of data.
+session_management:
+0 - 2 points: Working with PHP sessions to save user data, using the session_start and session_destroy functions.
+3 - 5 points: Secure session management with protection against interception attacks, the use of HttpOnly and setting the session lifetime.
+6 - 8 points: Create and configure complex session management systems using caches and databases to increase resilience.
+9 - 10 points: Designing distributed session management systems for scalable applications, supporting fault tolerance and minimizing response time.
+security_practices:
+0 - 2 points: Understanding basic security aspects such as preventing SQL injection and XSS attacks.
+3 - 5 points: Using data validation and filtering, CSRF protection, and configuring roles and permissions for users.
+6 - 8 points: Development and implementation of a reliable security strategy for secure applications, creation of a reliable security management infrastructure.
+9 - 10 points: Designing highly secure applications with integration of encryption and secure authentication, setting up monitoring and security management.
+composer_and_dependency_management:
+0 - 2 points: Using Composer to install dependencies and basic package management.
+3 - 5 points: Setting up startup, creating and managing dependencies to support projects and work with external libraries.
+6 - 8 points: Designing scalable architectures using Composer, creating custom packages and version control.
+9 - 10 points: Optimization and management of complex dependencies, integration of native and external libraries for large projects.
+template_engines:
+0 - 2 points: Understanding the basics of working with template engines such as Twig, creating simple templates.
+3 - 5 points: Development of complex templates using Twig and other template engines, working with display logic.
+6 - 8 points: Create effective templates for large applications, optimize and customize templates to improve performance.
+9 - 10 points: Designing scalable and flexible template systems for large projects, integration with client frameworks.
+http_requests_and_apis:
+0 - 2 points: Sending and receiving HTTP requests using cURL or built-in PHP functions.
+3 - 5 points: Working with the REST API, processing JSON, managing headers and configuring requests for security.
+6 - 8 points: Creating reliable APIs and managing interaction between services, error handling and retries.
+9 - 10 points: Designing distributed systems using APIs, implementing scalable RESTful or GraphQL APIs for high-load applications.
+unit_testing:
+0 - 2 points: Understanding the basics of testing, writing simple tests using PHPUnit.
+3 - 5 points: Create tests using mockups, stabs, and fixtures to test the interaction between components.
+6 - 8 points: Optimization of test coverage, integration of testing into the CI/CD process for automation.
+9 - 10 points: Creating comprehensive test frameworks for large-scale applications, ensuring high reliability and stability of the code.
+framework_knowledge:
+0 - 2 points: Working with the basic concepts of PHP frameworks such as Laravel or Symfony, creating simple projects.
+3 - 5 points: Using more complex framework functions, creating a REST API and configuring middleware.
+6 - 8 points: Optimizing application performance, using advanced features such as queues and events.
+9 - 10 points: Designing scalable applications using frameworks, creating custom modules and extensions for specialized tasks.

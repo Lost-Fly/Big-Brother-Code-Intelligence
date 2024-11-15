@@ -1,0 +1,51 @@
+Evaluation hints for language perl
+regular_expressions_mastery:
+0 - 2 points: Understanding the basics of regular expressions, such as searching and replacing text using simple patterns.
+3 - 5 points: Using more complex regular expressions using special characters such as lookahead and lookbehind.
+6 - 8 points: Creating complex patterns for processing large amounts of data, using expressions to validate and normalize data.
+9 - 10 points: Development and optimization of text processing systems using regular expressions, creation of reliable tools for data analysis and parsing.
+file_handling_and_io:
+0 - 2 points: Opening, reading and writing data to files, basic error handling during file operations.
+3 - 5 points: Working with binary and text files, using a lock to control access.
+6 - 8 points: Creation of reliable I/O systems, optimization of file operations for big data.
+9 - 10 points: Designing high-performance file management solutions, support for multithreaded operations and remote file systems.
+context_aware_programming:
+0 - 2 points: Understanding the differences between scalar and list context, basic context management.
+3 - 5 points: Context management in complex expressions and functions, using wantarray to define the behavior of a function.
+6 - 8 points: Creating functions that adapt to the context of the call, optimizing the code to work in different contexts.
+9 - 10 points: Development of highly adaptive modules that automatically adjust to the context, maximizing productivity and flexibility of the code.
+data_structures:
+0 - 2 points: Using arrays and hashes to store and manage data.
+3 - 5 points: Creating and managing nested data structures, working with multidimensional arrays and complex hashes.
+6 - 8 points: Optimization of complex data structures, designing structures to increase efficiency.
+9 - 10 points: Designing specialized data structures for high-performance systems, minimizing memory consumption.
+package_and_module_creation:
+0 - 2 points: Creating simple packages and modules for organizing code, understanding the use and require.
+3 - 5 points: Creating modules with exported functions, working with module settings and configuration.
+6 - 8 points: Development of reliable, reusable modules with configuration and dependency support.
+9 - 10 points: Create scalable libraries and frameworks, configure modules for compatibility and efficiency.
+error_handling_and_carp:
+0 - 2 points: Using die and warn for error handling and logging in Perl.
+3 - 5 points: Working with Carp to create custom error messages and improve debugging.
+6 - 8 points: Creation of advanced error logging systems and error management in multi-module applications.
+9 - 10 points: Creation of complex error handling systems that ensure application stability, integration with external monitoring systems.
+automation_scripting:
+0 - 2 points: Writing simple scripts to automate routine tasks.
+3 - 5 points: Creating more complex scripts with input data processing and output of results in the desired format.
+6 - 8 points: Optimizing scripts to perform tasks on large amounts of data, improving performance.
+9 - 10 points: Development of scalable automation solutions, integration with third-party services and creation of flexible automation tools.
+object_oriented_perl:
+0 - 2 points: Understanding the basics of OOP in Perl, creating simple classes and objects.
+3 - 5 points: Using Moose or Moo modules to create advanced objects, inheritance management.
+6 - 8 points: Development of flexible OOP structures, use of roles and composition for modular code.
+9 - 10 points: Creating scalable object-oriented systems, optimizing OOP for performance.
+memory_management:
+0 - 2 points: Understanding automatic memory management, basic work with variables.
+3 - 5 points: Optimize memory usage, reduce leaks through proper link management.
+6 - 8 points: Creating programs with low memory consumption, optimizing large arrays and hashes.
+9 - 10 points: Designing applications for efficient memory usage, minimizing and eliminating leaks in large-scale systems.
+testing_and_debugging:
+0 - 2 points: Writing simple tests using Test::Simple, debugging using built-in functions.
+3 - 5 points: Using Test::More for more detailed tests, working with debuggers to analyze complex errors.
+6 - 8 points: Creating test scenarios for multi-module applications, setting up automated tests.
+9 - 10 points: Development of comprehensive testing frameworks, CI/CD integration, ensuring code quality and stability.

@@ -1,0 +1,49 @@
+{
+  "type": "object",
+  "title": "",
+  "languageCompetencies": {
+    "flexbox_and_grid_layouts": {
+      "evaluation": 0
+    },
+    "responsive_design_techniques": {
+      "evaluation": 0
+    },
+    "selectors": {
+      "evaluation": 0
+    },
+    "specificity": {
+      "evaluation": 0
+    },
+    "animations": {
+      "evaluation": 0
+    },
+    "transitions": {
+      "evaluation": 0
+    },
+    "understanding_the_box_model": {
+      "evaluation": 0
+    },
+    "positioning_and_z-index_management": {
+      "evaluation": 0
+    },
+    "css_inheritance_and_cascade": {
+      "evaluation": 0
+    },
+    "media_queries": {
+      "evaluation": 0
+    },
+    "browser_compatibility_issues": {
+      "evaluation": 0
+    }
+  },
+  "algorithmSkills": {
+    "evaluation": 0
+  },
+  "dbSkills": {
+    "evaluation": 0
+  },
+  "brokerSkills": {
+    "evaluation": 0
+  },
+  "summary": ""
+}

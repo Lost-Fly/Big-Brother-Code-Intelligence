@@ -1,0 +1,51 @@
+Evaluation hints for language java
+object_oriented_programming_principles:
+0 - 2 points: Understanding the basics of OOP such as classes, objects, inheritance, encapsulation and polymorphism.
+3 - 5 points: Creating class hierarchies using interfaces and abstract classes, applying SOLID principles.
+6 - 8 points: Designing large systems using advanced OOP patterns and principles such as IoC (inversion of control).
+9 - 10 points: Architecture of scalable and modular systems with a highly organized object model, optimization of the performance of OOP structures.
+concurrency_and_multithreading:
+0 - 2 points: Understanding the basics of multithreading, creating threads using Thread and Runnable.
+3 - 5 points: Using synchronizers such as synchronized, lock and volatile to control flows.
+6 - 8 points: Implementation of high-performance multithreaded applications, resource management using frameworks such as java.util.concurrent.
+9 - 10 points: Designing scalable multithreaded systems, optimizing the use of threads for high-load applications, working with unmodified data structures to ensure thread safety.
+exception_handling:
+0 - 2 points: Using try-catch-finally to handle exceptions and ensure completion of operations.
+3 - 5 points: Create custom exceptions, implement a retry policy, and manage resources in case of errors.
+6 - 8 points: Development of exception management frameworks, integration with logging and monitoring.
+9 - 10 points: Optimization of exception handling in large-scale systems, minimizing the consequences of errors to increase the stability of the system.
+generics:
+0 - 2 points: Understanding the basics of generalizations to create generalized classes and methods.
+3 - 5 points: Using type constraints to ensure typical safety, creating flexible and reusable components.
+6 - 8 points: Designing frameworks using complex generalizations, using wildcard and extended type constraints.
+9 - 10 points: Optimization of generalized classes and methods to improve performance, creation of highly adaptive APIs.
+java_memory_model:
+0 - 2 points: Understanding the basic principles of memory management, such as heap and stack.
+3 - 5 points: Using memory profilers, configuring memory management to reduce memory leaks.
+6 - 8 points: In-depth configuration of the garbage collector, optimization of memory usage in high-performance applications.
+9 - 10 points: Create applications with minimal memory loss, develop and configure custom garbage collection algorithms for mission-critical applications.
+annotations_and_reflection:
+0 - 2 points: Creating and using annotations for metadata.
+3 - 5 points: Using reflection to work with annotations and dynamically load classes.
+6 - 8 points: Create your own annotations for application configuration management and dependency injection.
+9 - 10 points: Optimizing performance when using reflection, creating dynamic and adaptive applications that work with annotations and reflection.
+streams_and_lambda_expressions:
+0 - 2 points: Understanding the basics of working with the Stream API and using lambda expressions.
+3 - 5 points: Using the Stream API to work with collections, creating complex data processing chains.
+6 - 8 points: Designing complex data processing processes using the Stream API and optimizing performance.
+9 - 10 points: Development of highly efficient and parallel data processing solutions using the Stream API, the use of lambda expressions to create flexible APIs.
+file_io_and_serialization:
+0 - 2 points: Reading and writing data to a file using the File and FileInputStream classes.
+3 - 5 points: Working with object serialization, managing input and output streams for data processing.
+6 - 8 points: Creating highly efficient solutions for working with files, optimizing the performance of I/O operations.
+9 - 10 points: Optimizing data serialization for large applications, working with custom data formats and minimizing performance losses.
+jdbc_and_database_interaction:
+0 - 2 points: Using JDBC to connect to a database, perform simple queries and read data.
+3 - 5 points: Create efficient SQL queries, manage transactions, and work with the connection pool.
+6 - 8 points: Designing high-load applications using a database, optimizing queries and configuring connectivity.
+9 - 10 points: Creating scalable applications using advanced database interaction methods, setting up highly efficient transactional systems.
+network_programming:
+0 - 2 points: Creating simple network applications using sockets, reading and writing data over the network.
+3 - 5 points: Managing a multithreaded network, using network protocols for secure data transfer.
+6 - 8 points: Development of scalable network applications, ensuring reliability and security of communication.
+9 - 10 points: Creation of high-performance network solutions, support for scalability and fault tolerance of applications in real conditions.

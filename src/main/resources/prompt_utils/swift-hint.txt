@@ -1,0 +1,51 @@
+Evaluation hints for language swift
+optionals_and_unwrapping:
+0 - 2 points: Understanding the basics of options and using secure value extraction using optional binding and optional chaining.
+3 - 5 points: Using force unwrapping in safe cases, using the nil-coalescing operator to process values.
+6 - 8 points: API design with advanced options management, minimizing the use of force unwrapping.
+9 - 10 points: Creation of highly reliable systems with careful processing of options, integration with secure processing of nil values in complex data structures.
+protocol-oriented_programming:
+0 - 2 points: Creating simple protocols and implementing methods in classes and structures.
+3 - 5 points: Using protocols to separate responsibilities, using extensions to add functionality.
+6 - 8 points: Designing modular systems with protocols, using composition instead of inheritance.
+9 - 10 points: Creating scalable applications with a full focus on protocols, implementing flexible architectures for easily extensible projects.
+memory_management_with_arc:
+0 - 2 points: Understanding Automatic Reference Counting (ARC) and basic memory management.
+3 - 5 points: Using weak and unowned links to prevent cyclical dependencies.
+6 - 8 points: Optimize the use of ARC to improve performance, eliminate memory leaks.
+9 - 10 points: Designing highly efficient systems with precise memory management, minimizing ARC costs in large-scale applications.
+generics:
+0 - 2 points: Understanding the basics of generalizations and using them to create common functions and types.
+3 - 5 points: Using type constraints to create more flexible and secure APIs.
+6 - 8 points: Design of complex generalized structures and algorithms, optimization to improve performance.
+9 - 10 points: Creating adaptive frameworks using generalizations, maximizing typical security and code reuse.
+closures:
+0 - 2 points: Creating simple closures for passing functions as parameters.
+3 - 5 points: Using closures with variable capture, setting closures for asynchronous operations.
+6 - 8 points: Optimizing closures to improve performance and improve code modularity.
+9 - 10 points: API design with intensive use of closures, creation of safe and high-performance asynchronous operations.
+swift_ui_and_ui_kit:
+0 - 2 points: Creating basic interfaces using SwiftUI or UIKit, understanding the basics of navigation.
+3 - 5 points: Using complex interface components, working with states and animations.
+6 - 8 points: Creating high-performance interfaces, working with custom animations and event handling.
+9 - 10 points: Design of adaptive and scalable interfaces, integration of SwiftUI and UIKit to support complex functionality.
+error_handling:
+0 - 2 points: Using try, catch to handle errors, understanding the basics of do-catch.
+3 - 5 points: Creating custom errors, using guard and throw to manage errors.
+6 - 8 points: Development of comprehensive error handling strategies for large applications, logging integration.
+9 - 10 points: Design of fault-tolerant systems with stable error management and automated monitoring.
+extensions:
+0 - 2 points: Create simple extensions to add functionality to existing types.
+3 - 5 points: Using extensions to add protocols and functions, supporting code modularity.
+6 - 8 points: Development of large modules using extensions to improve code support and readability.
+9 - 10 points: Optimization of the application architecture using extensions for scalability and flexibility.
+networking_with_urlsession:
+0 - 2 points: Making simple network requests using URLSession to download data.
+3 - 5 points: Managing asynchronous requests, processing JSON responses, and working with request headers.
+6 - 8 points: Create reliable network layers with URLSession, manage caching and network errors.
+9 - 10 points: Designing high-performance network systems with integrated data management and security.
+testing_with_xctest:
+0 - 2 points: Create simple tests using XCTest for basic functionality verification.
+3 - 5 points: Creating mockups and stabs, writing tests for complex components, and UI testing.
+6 - 8 points: Development of reliable test suites, integration of testing into CI/CD.
+9 - 10 points: Optimization of testing of large applications, ensuring code coverage and long-term stability of the system.

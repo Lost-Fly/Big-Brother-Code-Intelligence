@@ -1,0 +1,49 @@
+{
+  "type": "object",
+  "title": "",
+  "languageCompetencies": {
+    "object-oriented_programming_principles": {
+      "evaluation": 0
+    },
+    "concurrency_and_multithreading": {
+      "evaluation": 0
+    },
+    "java_collections_framework": {
+      "evaluation": 0
+    },
+    "jvm_internals": {
+      "evaluation": 0
+    },
+    "memory_management": {
+      "evaluation": 0
+    },
+    "stream_api": {
+      "evaluation": 0
+    },
+    "functional_programming": {
+      "evaluation": 0
+    },
+    "exception_handling": {
+      "evaluation": 0
+    },
+    "annotations_usage": {
+      "evaluation": 0
+    },
+    "reflection_api": {
+      "evaluation": 0
+    },
+    "lambda_expressions": {
+      "evaluation": 0
+    }
+  },
+  "algorithmSkills": {
+    "evaluation": 0
+  },
+  "dbSkills": {
+    "evaluation": 0
+  },
+  "brokerSkills": {
+    "evaluation": 0
+  },
+  "summary": ""
+}

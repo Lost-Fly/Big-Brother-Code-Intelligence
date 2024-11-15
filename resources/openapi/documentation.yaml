@@ -1,0 +1,144 @@
+openapi: "3.1.0"
+info:
+  title: "big_brother_code_intelligence API"
+  description: "API для анализа компетенций разработчиков"
+  version: "1.0.0"
+servers:
+  - url: "https://bigbrotherai"
+paths:
+  /get_developer_analyse:
+    post:
+      summary: "Оценка компетенций разработчика"
+      description: "Анализирует компетенции разработчика на основе предоставленных репозиториев."
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: "Имя разработчика."
+                token:
+                  type: string
+                  description: "Персональный токен для доступа к приватным репозиториям."
+                repositories:
+                  type: array
+                  items:
+                    type: string
+                  description: "Список ссылок на репозитории."
+              required:
+                - name
+                - token
+                - repositories
+      responses:
+        '200':
+          description: "Успешный ответ с результатами анализа."
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  data:
+                    type: object
+                    properties:
+                      detailedAnalysis:
+                        type: object
+                        properties:
+                          developerName:
+                            type: string
+                          totalFiles:
+                            type: integer
+                          languagesAnalyse:
+                            type: object
+                            additionalProperties:
+                              type: object
+                              properties:
+                                progLang:
+                                  type: string
+                                languageCompetencies:
+                                  type: object
+                                  properties:
+                                    syntax:
+                                      type: string
+                                    idiomatic_usage:
+                                      type: string
+                                algorithmSkills:
+                                  type: integer
+                                dbSkills:
+                                  type: integer
+                                brokerSkills:
+                                  type: integer
+                                summary:
+                                  type: string
+        '500':
+          description: "Ошибка на сервере."
+
+  /get_developers_list:
+    get:
+      summary: Получение списка всех сохраненных отчетов разработчиков
+      description: Возвращает список отчетов анализа всех разработчиков, сохраненных в базе данных MongoDB.
+      responses:
+        '200':
+          description: Успешный запрос. Возвращается список отчетов.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    developerName:
+                      type: string
+                      description: Имя разработчика
+                      example: "developer1"
+                    totalFiles:
+                      type: integer
+                      description: Количество файлов, проанализированных для разработчика
+                      example: 55
+                    languagesAnalyse:
+                      type: object
+                      description: Детализированный анализ компетенций по каждому языку программирования
+                      properties:
+                        language:
+                          type: string
+                          description: Язык программирования
+                          example: "java"
+                        competencies:
+                          type: object
+                          additionalProperties:
+                            type: string
+                    algorithmSkills:
+                      type: integer
+                      description: Оценка навыков работы с алгоритмами
+                      example: 7
+                    dbSkills:
+                      type: integer
+                      description: Оценка навыков работы с базами данных
+                      example: 6
+                    brokerSkills:
+                      type: integer
+                      description: Оценка навыков работы с брокерами сообщений
+                      example: 8
+                    summary:
+                      type: string
+                      description: Краткое описание компетенций разработчика
+                      example: "Разработчик показал хорошие навыки во многих аспектах программирования."
+        '500':
+          description: Внутренняя ошибка сервера
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    description: Успешность выполнения запроса
+                    example: false
+                  message:
+                    type: string
+                    description: Текст ошибки
+                    example: "Произошла ошибка при обработке запроса"

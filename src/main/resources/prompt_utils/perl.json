@@ -1,0 +1,49 @@
+{
+  "type": "object",
+  "title": "",
+  "languageCompetencies": {
+    "regular_expressions_mastery": {
+      "evaluation": 0
+    },
+    "context_sensitive_execution": {
+      "evaluation": 0
+    },
+    "cpan_module_usage": {
+      "evaluation": 0
+    },
+    "symbol_table_manipulation": {
+      "evaluation": 0
+    },
+    "memory_management": {
+      "evaluation": 0
+    },
+    "file_and_io_operations": {
+      "evaluation": 0
+    },
+    "exception_handling": {
+      "evaluation": 0
+    },
+    "error_handling": {
+      "evaluation": 0
+    },
+    "hashes_and_arrays_management": {
+      "evaluation": 0
+    },
+    "references_and_data_structures": {
+      "evaluation": 0
+    },
+    "understanding_perl_syntax": {
+      "evaluation": 0
+    }
+  },
+  "algorithmSkills": {
+    "evaluation": 0
+  },
+  "dbSkills": {
+    "evaluation": 0
+  },
+  "brokerSkills": {
+    "evaluation": 0
+  },
+  "summary": ""
+}

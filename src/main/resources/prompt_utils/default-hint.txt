@@ -1,0 +1,16 @@
+Evaluation hints for language default
+algorithmSkills:
+0 - 2 points: Knowledge of basic data structures (e.g. arrays, lists, stacks, queues) and simple sorting and search algorithms.
+3 - 5 points: Understanding more complex algorithms such as merge sorting, quick sorting, graph algorithms (depth and width traversal) and dynamic programming.
+6 - 8 points: The ability to develop and optimize your own algorithms for solving complex problems, analyze temporal and spatial complexity.
+9 - 10 points: Application of advanced algorithmic concepts to improve application performance and development of highly efficient solutions for scalable systems.
+dbSkills:
+0 - 2 points: Understanding the basics of relational databases, performing basic CRUD operations (create, read, update, delete) and writing simple SQL queries.
+3 - 5 points: Knowledge of data normalization, writing complex SQL queries with joins, subqueries, and using indexes to optimize performance.
+6 - 8 points: Deep understanding of database architecture, transaction management, configuration of replication and sharding for scalable systems.
+9 - 10 points: Optimizing data schemas, configuring high-performance databases, and ensuring data reliability in large systems.
+brokerSkills:
+0 - 2 points: Understanding the principles of message brokers such as RabbitMQ or Apache Kafka, and the ability to create and manage simple queues and topics for transferring messages between services.
+3 - 5 points: Configuring message routing, managing confirmations and repeated delivery attempts, ensuring system reliability in case of failures.
+6 - 8 points: Design and implementation of scalable and distributed systems based on message brokers, performance optimization and integration with various services.
+9 - 10 points: Ensuring data transfer security, configuring complex architectures with brokers, and managing highly loaded systems using message brokers.
