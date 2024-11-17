@@ -12,13 +12,14 @@ class RepositoryAnalyzer(
     suspend fun analyzeCommit(commit: Commit): MutableMap<String, MatrixSchema> {
         val analysisResults: MutableMap<String, MutableList<MatrixSchema>> = mutableMapOf()
 
+        // TODO - delete commit files from system after successfull analyse
         commit.files.forEach { file ->
             if (FileUtils.isValidFile(file)) {
                 val parts = FileUtils.splitFile(file)
                 val progLang = FileUtils.getFileLanguage(file)
 
                 parts.forEach { part ->
-                    val result = languageModelIntegration.analyzeCode(part, progLang)
+                    val result = languageModelIntegration.analyzeCode(part, progLang) // TODO - use some CircuitBraker to determine if LLM RPS is overhead (LINK IN MODULE DeveloperService)
                     analysisResults[progLang]?.add(result) ?: analysisResults.put(progLang, mutableListOf(result))
                 }
             }

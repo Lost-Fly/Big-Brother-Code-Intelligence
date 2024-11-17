@@ -26,7 +26,7 @@ ktor {
 
 tasks {
     shadowJar {
-        archiveFileName.set("BigBrother111.jar")
+        archiveFileName.set("BigBrother.jar")
     }
 }
 
@@ -37,7 +37,7 @@ repositories {
 }
 
 dependencies {
-    // Ktor core dependencies (updated to 2.0.20)
+    // Ktor core dependencies
     implementation("io.ktor:ktor-server-core-jvm:2.3.12")
     implementation("io.ktor:ktor-server-auto-head-response-jvm:2.3.12")
     implementation("io.ktor:ktor-server-resources-jvm:2.3.12")
@@ -48,19 +48,12 @@ dependencies {
     implementation("io.ktor:ktor-server-content-negotiation-jvm:2.3.12")
     implementation("io.ktor:ktor-serialization-jackson-jvm:2.3.12")
     implementation("com.google.code.gson:gson:2.11.0")
-//    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.3")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-core:1.0.0-RC")
 
     // MongoDB driver dependencies
     implementation("org.mongodb:mongodb-driver-core:$mongo_version")
     implementation("org.mongodb:mongodb-driver-sync:$mongo_version")
     implementation("org.mongodb:bson:$mongo_version")
-
-//    // Task scheduling dependencies
-//    implementation("io.github.flaxoos:ktor-server-task-scheduling-core-jvm:1.2.10")
-//    implementation("io.github.flaxoos:ktor-server-task-scheduling-redis-jvm:1.2.10")
-//    implementation("io.github.flaxoos:ktor-server-task-scheduling-mongodb-jvm:1.2.10")
-//    implementation("io.github.flaxoos:ktor-server-task-scheduling-jdbc-jvm:1.2.10")
 
     // Ktor server engine version aligned with modern version
     implementation("io.ktor:ktor-server-netty-jvm:2.3.12")
@@ -72,15 +65,19 @@ dependencies {
     implementation("org.eclipse.jgit:org.eclipse.jgit.ssh.apache:6.7.0.202309050840-r")
     implementation("org.eclipse.jgit:org.eclipse.jgit.gpg.bc:6.7.0.202309050840-r")
 
-    // Coroutines with updated versions aligned for better compatibility
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.9.0") // Современная версия
+    // Coroutines core
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.9.0")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.9.0")
 
     // Matching the Kotlin runtime version
     implementation("org.jetbrains.kotlin:kotlin-reflect:$kotlin_version")
 
-    // Update Ktor client dependencies to the correct version
+    // Ktor client
     implementation("io.ktor:ktor-client-core-jvm:2.3.12")
     implementation("io.ktor:ktor-client-cio-jvm:2.3.12")
     implementation("io.ktor:ktor-client-content-negotiation:2.3.12")
+
+    // Logging
+    implementation("org.slf4j:slf4j-api:2.0.16")
+    implementation("ch.qos.logback:logback-classic:1.3.14")
 }

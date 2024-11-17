@@ -11,7 +11,8 @@ import io.ktor.server.routing.*
 
 
 fun main() {
-    embeddedServer(Netty, port = 8869, module = Application::module).start(wait = true) // TODO - PORT move to props
+    // TODO - ADD RATE LIMITER TO SERVER with configured connections and RPS number, configs in properties
+    embeddedServer(Netty, port = 8869, module = Application::module).start(wait = true) // TODO - PORT move to properties
 }
 
 fun Application.module() {

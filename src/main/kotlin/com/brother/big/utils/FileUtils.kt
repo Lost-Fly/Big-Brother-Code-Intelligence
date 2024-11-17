@@ -8,20 +8,19 @@ object FileUtils {
         val excludedExtensions =
             listOf(
                 "conf", "md", "json",
-                "yml", "yaml", "xml",
-                "txt", "lock", "gitignore",
+                "xml", "txt", "lock",
                 "gitattributes", "gitmodules",
                 "gitkeep", "git", "editorconfig",
                 "gitlab-ci.yml", "gitlab-ci.yaml",
                 "gitlab-ci.json", "gitlab-ci",
                 "gitlab", "github", "idea",
-                "vscode", "vs", "", " ", '.', ' ', "properties",
+                "vscode", "vs", "properties",
                 "mod", "sum", "gradle", "gradlew", "gradlew.bat",
-            ) // TODO - optimize and add more
+            ) // TODO - optimize and add more trashy files
         return file.extension !in excludedExtensions
     }
 
-    fun splitFile(file: File, partSize: Int = 7000): List<String> {
+    fun splitFile(file: File, partSize: Int = 7000): List<String> { // TODO - partSize move to properties
         val fileContent = file.readText()
         return fileContent.chunked(partSize)
     }
@@ -29,8 +28,7 @@ object FileUtils {
     fun getFileLanguage(file: File): String {
         val extension = file.extension
 
-        println("DETER FILE ext: " + extension) // TODO - use slf4j logger
-        return when (extension) { // TODO - add more
+        return when (extension) {
             "kt" -> "kotlin"
             "java" -> "java"
             "py" -> "python"

@@ -15,9 +15,12 @@ build/
 bin/
 !**/src/main/**/bin/
 !**/src/test/**/bin/
+.MF
 
 ### IntelliJ IDEA ###
 .idea
+.jar
+.bat
 *.iws
 *.iml
 *.ipr

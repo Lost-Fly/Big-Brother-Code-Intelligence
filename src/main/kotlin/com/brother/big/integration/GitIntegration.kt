@@ -10,8 +10,7 @@ import java.io.IOException
 class GitIntegration {
 
     fun getCommits(developerName: String, token: String?, repositoryUrl: String): List<Commit> {
-        // TODO - change storsge method
-        val tmpDir = File.createTempFile("repo_", "to_$developerName")
+        val tmpDir = File.createTempFile("repo_", "to_$developerName") // TODO - add restriction dir size for cloning! If there ae no enough space at server to store files drop request
         tmpDir.delete()
 
         try {
@@ -35,6 +34,7 @@ class GitIntegration {
                     val flag = userEmail.toString().contains(developerName)
                     if (revCommit.authorIdent.name == developerName || flag) {
                         val commit = extractCommit(repository, revCommit, developerName)
+                        // TODO add commit message analyse (determine if commit is important or there are just small fixes by LLM Model)
                         commits.add(commit)
                     }
                 }
@@ -44,8 +44,6 @@ class GitIntegration {
         } catch (e: IOException) {
             e.printStackTrace()
             throw RuntimeException("Failed to clone repository: ${e.message}")
-        } finally {
-            // tmpDir.deleteRecursively() SERVER BABAX // TODO
         }
     }
 

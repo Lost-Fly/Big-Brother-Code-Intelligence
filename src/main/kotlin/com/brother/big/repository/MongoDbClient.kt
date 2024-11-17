@@ -1,6 +1,7 @@
 package com.brother.big.repository
 
 import com.brother.big.model.*
+import com.brother.big.utils.BigLogger.logInfo
 import com.fasterxml.jackson.annotation.JsonInclude
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.mongodb.client.MongoClient
@@ -11,10 +12,10 @@ import org.bson.Document
 
 
 class MongoDbClient(
-    private val connectionString: String = "mongodb://localhost:27017", // TODO - mpve to properties all below
-    private val databaseName: String = "bigBrotherDb",
-    private val developersCollectionName: String = "developers",
-    private val resultsCollectionName: String = "analysisResults"
+    connectionString: String = "mongodb://localhost:27017", // TODO - move to properties all below
+    databaseName: String = "bigBrotherDb", // TODO - move to properties
+    developersCollectionName: String = "developers", // TODO - move to properties
+    resultsCollectionName: String = "analysisResults" // TODO - move to properties
 ) {
 
     private val client: MongoClient = MongoClients.create(connectionString)
@@ -51,7 +52,6 @@ class MongoDbClient(
         }
     }
 
-
     fun saveAnalysisResult(developerName: String, analysisResult: AnalysisResult): Boolean {
         return try {
             val resultDoc = Document(mapOf(
@@ -64,7 +64,7 @@ class MongoDbClient(
                 resultDoc,
                 com.mongodb.client.model.ReplaceOptions().upsert(true)
             )
-            println("SAVED analyse to DB success") // TODO - use slf4j logger
+            logInfo("SAVED ANALYSE FOR DEV: $developerName TO DB")
             true
         } catch (e: Exception) {
             e.printStackTrace()

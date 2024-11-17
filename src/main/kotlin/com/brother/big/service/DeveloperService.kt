@@ -18,11 +18,12 @@ class DeveloperService(
     private val languageModelIntegration: LLMIntegration = LLMIntegration(),
     private val developerRepository: DeveloperRepository = DeveloperRepositoryImpl()
 ) {
-    private val semaphore = Semaphore(15)
+    private val semaphore = Semaphore(20)  // TODO - use some CircuitBraker to determine if LLM RPS is overhead
 
     suspend fun evaluateDeveloper(developer: Developer): Report = coroutineScope {
         val allCommitsResults: MutableMap<String, MutableList<MatrixSchema>> = mutableMapOf()
 
+        // TODO - evaluate reps in diff corrutines
         developer.repositories.map { repositoryUrl ->
 
             val commits: List<Commit> = gitIntegration.getCommits(developer.name, developer.token, repositoryUrl)
@@ -49,7 +50,7 @@ class DeveloperService(
         return@coroutineScope report
     }
 
-    suspend fun getAllAnalysisResults(): List<AnalysisResult> {
+    fun getAllAnalysisResults(): List<AnalysisResult> {
         return developerRepository.getAllAnalysisResults()
     }
 

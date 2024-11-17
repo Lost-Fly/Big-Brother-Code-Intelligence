@@ -1,10 +1,9 @@
 package com.brother.big.repository
 
 import com.brother.big.model.AnalysisResult
-import com.brother.big.model.Developer
 
-class DeveloperRepositoryImpl(
-    private val mongoDbClient: MongoDbClient = MongoDbClient()  // TODO - chenge methods (there are extra \ add new)
+class DeveloperRepositoryImpl( // TODO - add saveDeveloperByGitName and getDeveloperByGitName method
+    private val mongoDbClient: MongoDbClient = MongoDbClient()
 ) : DeveloperRepository {
 
     override fun saveAnalysisResult(developerName: String, analysisResult: AnalysisResult): Boolean {
