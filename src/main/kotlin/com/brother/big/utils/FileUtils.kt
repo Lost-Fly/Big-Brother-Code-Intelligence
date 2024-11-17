@@ -4,23 +4,14 @@ import java.io.File
 
 object FileUtils {
 
+    private val partSize = Config["utils.partSize"]?.toInt() ?: 5000
+
     fun isValidFile(file: File): Boolean {
-        val excludedExtensions =
-            listOf(
-                "conf", "md", "json",
-                "xml", "txt", "lock",
-                "gitattributes", "gitmodules",
-                "gitkeep", "git", "editorconfig",
-                "gitlab-ci.yml", "gitlab-ci.yaml",
-                "gitlab-ci.json", "gitlab-ci",
-                "gitlab", "github", "idea",
-                "vscode", "vs", "properties",
-                "mod", "sum", "gradle", "gradlew", "gradlew.bat",
-            ) // TODO - optimize and add more trashy files
+        val excludedExtensions = Config["excluded.file.extensions"]?.split(",") ?: emptyList()
         return file.extension !in excludedExtensions
     }
 
-    fun splitFile(file: File, partSize: Int = 7000): List<String> { // TODO - partSize move to properties
+    fun splitFile(file: File): List<String> {
         val fileContent = file.readText()
         return fileContent.chunked(partSize)
     }

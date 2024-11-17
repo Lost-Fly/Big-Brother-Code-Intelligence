@@ -7,6 +7,7 @@ import com.brother.big.integration.llm_utils.LLMUtils.loadSchema
 import com.brother.big.model.llm.MatrixSchema
 import com.brother.big.utils.BigLogger.logError
 import com.brother.big.utils.BigLogger.logInfo
+import com.brother.big.utils.Config
 import com.brother.big.utils.JsonUtils.cleanRawString
 import com.fasterxml.jackson.databind.JsonNode
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
@@ -22,19 +23,19 @@ import kotlin.collections.set
 
 class LLMIntegration {
     companion object LLMIntegration {
-        // TODO - move all to properties file
-        const val MODEL = "gpt-4o-mini" // TODO - move to properties
-        const val MAX_TOKENS = 5000 // TODO - move to properties
-        const val TEMPERATURE = 0.1 // TODO - move to properties
-        const val SYSTEM_ROLE = "system" // TODO - move to properties
-        const val USER_ROLE = "user" // TODO - move to properties
-        const val API_KEY = "NONONONON" // TODO - move to properties
-        const val openAiUrl = "https://api.openai.com/v1/chat/completions" // TODO - move to properties
+        val MODEL = Config["llm.model"] ?: "llama3.7"
+        val MAX_TOKENS: Int = Config["llm.maxTokens"]?.toInt() ?: 8092
+        val TEMPERATURE: Double = Config["llm.temperature"]?.toDouble() ?: 0.0
+        val SYSTEM_ROLE = Config["llm.systemRole"] ?: "system"
+        val USER_ROLE = Config["llm.userRole"] ?: "user"
+        val API_KEY = Config["llm.apiKey"] ?: "apiKey"
+        val LLM_URL = Config["llm.llmUrl"] ?: "llm://localhost:1212"
+        val MERGE_LIMIT: Int = Config["llm.mergeLimit"]?.toInt() ?: 30
     }
 
     val llmClient = HttpClient { // TODO - ADD Proxy to llmClient (use proxy server for openAI requests)
         install(HttpTimeout) {
-            requestTimeoutMillis = 3600_000 // TODO - saperate and move param to properties
+            requestTimeoutMillis = Config["llm.requestTimeoutMillis"]?.toLong() ?: 10000
         }
     }
 
@@ -52,7 +53,7 @@ class LLMIntegration {
         ))
     }
 
-    suspend fun getResponse(requestBody: String): HttpResponse = llmClient.post(openAiUrl) {
+    suspend fun getResponse(requestBody: String): HttpResponse = llmClient.post(LLM_URL) {
         contentType(ContentType.Application.Json)
         header("Authorization", "Bearer $API_KEY")
         setBody(requestBody)
@@ -88,7 +89,6 @@ class LLMIntegration {
         val mergedResults: MutableMap<String, MatrixSchema> = mutableMapOf()
 
         val limitedResults: Map<String, List<MatrixSchema>> = results.mapValues { entry ->
-            val MERGE_LIMIT: Int = 30 // TODO - move to configs properties
             entry.value.take(MERGE_LIMIT)
         }
 

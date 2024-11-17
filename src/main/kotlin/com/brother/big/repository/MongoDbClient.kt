@@ -2,6 +2,7 @@ package com.brother.big.repository
 
 import com.brother.big.model.*
 import com.brother.big.utils.BigLogger.logInfo
+import com.brother.big.utils.Config
 import com.fasterxml.jackson.annotation.JsonInclude
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.mongodb.client.MongoClient
@@ -12,10 +13,10 @@ import org.bson.Document
 
 
 class MongoDbClient(
-    connectionString: String = "mongodb://localhost:27017", // TODO - move to properties all below
-    databaseName: String = "bigBrotherDb", // TODO - move to properties
-    developersCollectionName: String = "developers", // TODO - move to properties
-    resultsCollectionName: String = "analysisResults" // TODO - move to properties
+    connectionString: String = Config["database.connectionString"] ?: "mongodb://localhost:27017",
+    databaseName: String = Config["database.name"] ?: "test",
+    developersCollectionName: String = Config["database.developersCollection"] ?: "developersTest",
+    resultsCollectionName: String = Config["database.resultsCollection"] ?: "analysisTest"
 ) {
 
     private val client: MongoClient = MongoClients.create(connectionString)
@@ -34,6 +35,7 @@ class MongoDbClient(
                 developerDoc,
                 com.mongodb.client.model.ReplaceOptions().upsert(true)
             )
+            logInfo("SAVED DEV: ${developer.name} TO DB")
             true
         } catch (e: Exception) {
             e.printStackTrace()

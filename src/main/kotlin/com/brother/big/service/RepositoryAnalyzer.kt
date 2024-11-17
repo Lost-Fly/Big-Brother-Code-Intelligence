@@ -12,7 +12,6 @@ class RepositoryAnalyzer(
     suspend fun analyzeCommit(commit: Commit): MutableMap<String, MatrixSchema> {
         val analysisResults: MutableMap<String, MutableList<MatrixSchema>> = mutableMapOf()
 
-        // TODO - delete commit files from system after successfull analyse
         commit.files.forEach { file ->
             if (FileUtils.isValidFile(file)) {
                 val parts = FileUtils.splitFile(file)
@@ -23,6 +22,10 @@ class RepositoryAnalyzer(
                     analysisResults[progLang]?.add(result) ?: analysisResults.put(progLang, mutableListOf(result))
                 }
             }
+        }
+
+        commit.files.forEach { file ->
+            file.delete()
         }
 
         return mergeAnalysisResults(analysisResults)
