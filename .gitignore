@@ -1,8 +1,16 @@
 .gradle
 build/
-!gradle/wrapper/gradle-wrapper.jar
+gradle/wrapper/gradle-wrapper.jar
+gradle/wrapper/gradle-wrapper.properties
+.gradelw
+/gradlew
+/gradlew.bat
 !**/src/main/**/build/
-!**/src/test/**/build/
+!**/src/test/**/build
+**/src/main/resources/
+/settings.gradle.kts
+**/MANIFEST.MF
+
 
 ### STS ###
 .apt_generated
