@@ -12,7 +12,7 @@ class RepositoryAnalyzer(
     suspend fun analyzeCommit(commit: Commit): MutableMap<String, MatrixSchema> {
         val analysisResults: MutableMap<String, MutableList<MatrixSchema>> = mutableMapOf()
 
-        commit.files.forEach { file ->
+        commit.files.forEach { file -> // TODO - if file is small, unit it with another one, and send amount of files to analyse instead of one, use configure value N to determain MAX unit length of files content
             if (FileUtils.isValidFile(file)) {
                 val parts = FileUtils.splitFile(file)
                 val progLang = FileUtils.getFileLanguage(file)

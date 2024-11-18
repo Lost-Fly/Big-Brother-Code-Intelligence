@@ -49,6 +49,7 @@ dependencies {
     implementation("io.ktor:ktor-serialization-jackson-jvm:2.3.12")
     implementation("com.google.code.gson:gson:2.11.0")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-core:1.0.0-RC")
+    implementation("io.ktor:ktor-server-rate-limit:2.3.12")
 
     // MongoDB driver dependencies
     implementation("org.mongodb:mongodb-driver-core:$mongo_version")

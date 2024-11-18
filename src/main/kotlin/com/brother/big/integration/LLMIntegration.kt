@@ -7,6 +7,7 @@ import com.brother.big.integration.llm_utils.LLMUtils.loadSchema
 import com.brother.big.model.llm.MatrixSchema
 import com.brother.big.utils.BigLogger.logError
 import com.brother.big.utils.BigLogger.logInfo
+import com.brother.big.utils.BigLogger.logDebug
 import com.brother.big.utils.Config
 import com.brother.big.utils.JsonUtils.cleanRawString
 import com.fasterxml.jackson.databind.JsonNode
@@ -77,7 +78,7 @@ class LLMIntegration {
         val response: HttpResponse = getResponse(requestBody)
         val rawResponseBody = response.bodyAsText()
 
-        logInfo("LLM RESPONSE: $rawResponseBody")
+        logDebug("LLM RESPONSE: $rawResponseBody")
 
         val content = extractGptResponse(rawResponseBody)
         requireNotNull(content) { logError("GPT RESPONSE EXTRACTION FAILED") }
@@ -101,7 +102,7 @@ class LLMIntegration {
             val response = getResponse(requestBody)
             val rawResponseBody = response.bodyAsText()
 
-            logInfo("LLM MERGING: $rawResponseBody")
+            logDebug("LLM MERGING: $rawResponseBody")
 
             val content = extractGptResponse(rawResponseBody)
             requireNotNull(content) { logError("GPT RESPONSE EXTRACTION FAILED") }
