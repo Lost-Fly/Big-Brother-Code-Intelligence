@@ -5,6 +5,7 @@ import com.brother.big.integration.llm_utils.LLMUtils.generateMergePrompt
 import com.brother.big.integration.llm_utils.LLMUtils.generatePrompt
 import com.brother.big.integration.llm_utils.LLMUtils.loadSchema
 import com.brother.big.model.llm.MatrixSchema
+import com.brother.big.utils.BigLogger.logDebug
 import com.brother.big.utils.BigLogger.logError
 import com.brother.big.utils.BigLogger.logInfo
 import com.brother.big.utils.Config
@@ -13,10 +14,13 @@ import com.fasterxml.jackson.databind.JsonNode
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
 import io.ktor.client.*
+import io.ktor.client.engine.okhttp.*
 import io.ktor.client.plugins.*
 import io.ktor.client.request.*
 import io.ktor.client.statement.*
 import io.ktor.http.*
+import java.net.InetSocketAddress
+import java.net.Proxy
 import kotlin.collections.component1
 import kotlin.collections.component2
 import kotlin.collections.set
@@ -31,26 +35,38 @@ class LLMIntegration {
         val API_KEY = Config["llm.apiKey"] ?: "apiKey"
         val LLM_URL = Config["llm.llmUrl"] ?: "llm://localhost:1212"
         val MERGE_LIMIT: Int = Config["llm.mergeLimit"]?.toInt() ?: 30
+        val PROXY_URL = Config["llm.proxyUrl"] ?: "proxyHost"
+        val PROXY_PORT: Int = Config["llm.proxyPort"]?.toInt() ?: 60443
+        val USE_PROXY: Boolean = Config["llm.useProxy"]?.toBoolean() ?: false
     }
 
-    val llmClient = HttpClient { // TODO - ADD Proxy to llmClient (use proxy server for openAI requests)
-        install(HttpTimeout) {
-            requestTimeoutMillis = Config["llm.requestTimeoutMillis"]?.toLong() ?: 10000
+    private val proxyAddress = InetSocketAddress(PROXY_URL, PROXY_PORT)
+    private val httpsProxy = Proxy(Proxy.Type.HTTP, proxyAddress)
+
+    val llmClient = HttpClient(OkHttp) {
+        install (HttpTimeout) {
+            requestTimeoutMillis = Config["llm.requestTimeoutMillis"]?.toLong() ?: 100000
+            connectTimeoutMillis = Config["llm.connectionTimeoutMillis"]?.toLong() ?: 100000
+        }
+        engine {
+            proxy = httpsProxy
         }
     }
 
     private val mapper = jacksonObjectMapper()
 
     fun getRequestBody(prompt: String): String {
-        return mapper.writeValueAsString(mapOf(
-            "model" to MODEL,
-            "messages" to listOf(
-                mapOf("role" to SYSTEM_ROLE, "content" to MOTIVATION_BASICS),
-                mapOf("role" to USER_ROLE, "content" to prompt)
-            ),
-            "max_tokens" to MAX_TOKENS,
-            "temperature" to TEMPERATURE
-        ))
+        return mapper.writeValueAsString(
+            mapOf(
+                "model" to MODEL,
+                "messages" to listOf(
+                    mapOf("role" to SYSTEM_ROLE, "content" to MOTIVATION_BASICS),
+                    mapOf("role" to USER_ROLE, "content" to prompt)
+                ),
+                "max_tokens" to MAX_TOKENS,
+                "temperature" to TEMPERATURE
+            )
+        )
     }
 
     suspend fun getResponse(requestBody: String): HttpResponse = llmClient.post(LLM_URL) {
@@ -101,7 +117,7 @@ class LLMIntegration {
             val response = getResponse(requestBody)
             val rawResponseBody = response.bodyAsText()
 
-            logInfo("LLM MERGING: $rawResponseBody")
+            logDebug("LLM MERGING: $rawResponseBody")
 
             val content = extractGptResponse(rawResponseBody)
             requireNotNull(content) { logError("GPT RESPONSE EXTRACTION FAILED") }
