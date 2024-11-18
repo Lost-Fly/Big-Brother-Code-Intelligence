@@ -17,7 +17,7 @@ class GitIntegration {
             val gitBuilder = Git.cloneRepository()
                 .setURI(repositoryUrl)
                 .setDirectory(tmpDir)
-                .setCloneAllBranches(true)
+                .setCloneAllBranches(true) // TODO - add restriction dir size for cloning! If there ae no enough space at server to store files drop request
 
             if (token != null) {
                 gitBuilder.setCredentialsProvider(
@@ -25,17 +25,17 @@ class GitIntegration {
                 )
             }
 
-            gitBuilder.call().use { git ->
+            gitBuilder.call().use { git -> // TODO - add restriction dir size for cloning! If there ae no enough space at server to store files drop request
                 val repository = git.repository
-                val commits: MutableList<Commit> = mutableListOf()
+                val commits: MutableList<Commit> = mutableListOf() // TODO restrict commits length by config parameter
 
-                git.log().all().call().forEach { revCommit ->
+                git.log().all().call().forEach { revCommit -> // TODO parse and save only last N commits, N - config value
                     val userEmail = revCommit.authorIdent.emailAddress
                     val flag = userEmail.toString().contains(developerName)
                     if (revCommit.authorIdent.name == developerName || flag) {
                         val commit = extractCommit(repository, revCommit, developerName)
                         // TODO add commit message analyse (determine if commit is important or there are just small fixes by LLM Model)
-                        commits.add(commit)
+                        commits.add(commit) // TODO restrict commits length by config parameter if limit exceeded - stop adding commits and continue
                     }
                 }
 

@@ -19,4 +19,8 @@ object BigLogger {
     fun logError(message: String) {
         logger.error(message)
     }
+
+    fun logDebug(message: String) {
+        logger.debug(message)
+    }
 }
