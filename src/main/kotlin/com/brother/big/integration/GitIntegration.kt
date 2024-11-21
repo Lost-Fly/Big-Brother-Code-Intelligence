@@ -1,6 +1,8 @@
 package com.brother.big.integration
 
 import com.brother.big.model.Commit
+import com.brother.big.utils.BigLogger.logError
+import com.brother.big.utils.Config
 import org.eclipse.jgit.api.Git
 import org.eclipse.jgit.revwalk.RevCommit
 import org.eclipse.jgit.treewalk.TreeWalk
@@ -8,44 +10,72 @@ import java.io.File
 import java.io.IOException
 
 class GitIntegration {
+    companion object {
+        val MAX_COMMITS: Int = Config["git.maxCommits"]?.toInt() ?: 1000
+        val MAX_DEV_COMMITS: Int = Config["git.maxDevCommits"]?.toInt() ?: 10
+        val MAX_TEMP_DIR_SIZE_MB: Long = Config["git.maxTempSpaceMb"]?.toLong() ?: 100
+    }
 
     fun getCommits(developerName: String, token: String?, repositoryUrl: String): List<Commit> {
-        val tmpDir = File.createTempFile("repo_", "to_$developerName") // TODO - add restriction dir size for cloning! If there ae no enough space at server to store files drop request
-        tmpDir.delete()
+        val tmpDir = createRestrictedTempDir(developerName)
 
         try {
             val gitBuilder = Git.cloneRepository()
                 .setURI(repositoryUrl)
                 .setDirectory(tmpDir)
-                .setCloneAllBranches(true) // TODO - add restriction dir size for cloning! If there ae no enough space at server to store files drop request
+                .setCloneAllBranches(true)
+                .setDepth(MAX_COMMITS)
 
-            if (token != null) {
+            token?.let {
                 gitBuilder.setCredentialsProvider(
                     org.eclipse.jgit.transport.UsernamePasswordCredentialsProvider(developerName, token)
                 )
             }
 
-            gitBuilder.call().use { git -> // TODO - add restriction dir size for cloning! If there ae no enough space at server to store files drop request
-                val repository = git.repository
-                val commits: MutableList<Commit> = mutableListOf() // TODO restrict commits length by config parameter
-
-                git.log().all().call().forEach { revCommit -> // TODO parse and save only last N commits, N - config value
-                    val userEmail = revCommit.authorIdent.emailAddress
-                    val flag = userEmail.toString().contains(developerName)
-                    if (revCommit.authorIdent.name == developerName || flag) {
-                        val commit = extractCommit(repository, revCommit, developerName)
-                        // TODO add commit message analyse (determine if commit is important or there are just small fixes by LLM Model)
-                        commits.add(commit) // TODO restrict commits length by config parameter if limit exceeded - stop adding commits and continue
-                    }
+            gitBuilder.call().use { git ->
+                if (tmpDir.length() > convertMbToBytes(MAX_TEMP_DIR_SIZE_MB)) {
+                    cleanupTempDir(tmpDir)
+                    logError("Temporary directory size exceeded the allowed limit of $MAX_TEMP_DIR_SIZE_MB MB")
                 }
+
+                val repository = git.repository
+                val commits: MutableList<Commit> = mutableListOf()
+
+                git.log().all().call().asSequence()
+                    .filter { revCommit ->
+                        revCommit.authorIdent.name == developerName ||
+                                revCommit.authorIdent.emailAddress.toString().contains(developerName)
+                    }
+                    .take(MAX_DEV_COMMITS)
+                    .forEach { revCommit ->
+                        val commit = extractCommit(repository, revCommit, developerName)
+                        commits.add(commit)
+                    }
 
                 return commits
             }
         } catch (e: IOException) {
             e.printStackTrace()
+            logError("Failed to clone repository: ${e.message}")
             throw RuntimeException("Failed to clone repository: ${e.message}")
         }
     }
+
+    private fun createRestrictedTempDir(developerName: String): File {
+        val tmpDir = File.createTempFile("repo_", "to_$developerName")
+        if (!tmpDir.delete() || !tmpDir.mkdir()) {
+            logError("Failed to create temporary directory")
+        }
+        return tmpDir
+    }
+
+    private fun cleanupTempDir(tmpDir: File) {
+        if (tmpDir.exists()) {
+            tmpDir.deleteRecursively()
+        }
+    }
+
+    private fun convertMbToBytes(mb: Long): Long = mb * 1024 * 1024
 
     private fun extractCommit(repository: org.eclipse.jgit.lib.Repository, commit: RevCommit, developerName: String): Commit {
         val commitId = commit.id.name
