@@ -24,7 +24,7 @@ class DeveloperController(private val developerService: DeveloperService) {
             rateLimit(RateLimitName("get_developer_analyse")) {
                 post {
                     try {
-                        val developer = call.receive<Developer>()
+                        val developer = call.receive<Developer>() // TODO rename and change request type to handel additional data (Such as number of commits to analyse)
 
                         logInfo("Received developer: $developer")
 
