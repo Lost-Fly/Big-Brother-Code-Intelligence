@@ -6,6 +6,7 @@ import com.brother.big.model.*
 import com.brother.big.model.llm.MatrixSchema
 import com.brother.big.repository.DeveloperRepository
 import com.brother.big.repository.DeveloperRepositoryImpl
+import com.brother.big.utils.BigLogger.logInfo
 import com.brother.big.utils.Config
 import kotlinx.coroutines.*
 import kotlinx.coroutines.sync.Semaphore
@@ -33,6 +34,8 @@ class DeveloperService(
                 async {
                     val commits: List<Commit> =
                         gitIntegration.getCommits(developer.name, developer.token, repositoryUrl)
+
+                    logInfo("DeveloperService#evaluateDeveloper get ${commits.size} commits with ${commits.map { commit -> commit.files.size }.sum()} files for developer ${developer}")
 
                     val commitAnalysisResults = commits.map { commit ->
                         async {

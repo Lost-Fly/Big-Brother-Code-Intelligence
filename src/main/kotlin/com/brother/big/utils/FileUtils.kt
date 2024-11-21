@@ -10,7 +10,8 @@ object FileUtils {
     fun isValidFile(file: File): Boolean {
         if (file.exists()) {
             val excludedExtensions = Config["excluded.file.extensions"]?.split(",") ?: emptyList()
-            return file.extension !in excludedExtensions
+            val validExtensions = Config["valid.file.extensions"]?.split(",") ?: emptyList()
+            return (file.extension !in excludedExtensions && file.extension in validExtensions)
         } else {
             logError("FileUtils#isValidFile Error - file: ${file.name} NOT FOUND")
             return true
@@ -52,7 +53,7 @@ object FileUtils {
                 else -> "default"
             }
         } else {
-            logError("FileUtils#getFileLanguage Error - file: ${file.name} NOT FOUND")
+            logError("FileUtils#getFileLanguage Error - file extension: ${file.name} NOT FOUND")
             return "default"
         }
     }
