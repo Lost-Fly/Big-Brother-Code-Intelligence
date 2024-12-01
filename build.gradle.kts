@@ -49,6 +49,7 @@ dependencies {
     implementation("io.ktor:ktor-serialization-jackson-jvm:2.3.12")
     implementation("com.google.code.gson:gson:2.11.0")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-core:1.0.0-RC")
+    implementation("io.ktor:ktor-server-rate-limit:2.3.12")
 
     // MongoDB driver dependencies
     implementation("org.mongodb:mongodb-driver-core:$mongo_version")
@@ -80,5 +81,6 @@ dependencies {
     // Logging
     implementation("org.slf4j:slf4j-api:2.0.16")
     implementation("ch.qos.logback:logback-classic:1.3.14")
+
     implementation("io.ktor:ktor-client-okhttp:3.0.0")
 }

@@ -1,12 +1,13 @@
 package com.brother.big.service
 
-
 import com.brother.big.integration.GitIntegration
 import com.brother.big.integration.LLMIntegration
 import com.brother.big.model.*
 import com.brother.big.model.llm.MatrixSchema
 import com.brother.big.repository.DeveloperRepository
 import com.brother.big.repository.DeveloperRepositoryImpl
+import com.brother.big.utils.BigLogger.logInfo
+import com.brother.big.utils.Config
 import kotlinx.coroutines.*
 import kotlinx.coroutines.sync.Semaphore
 import kotlinx.coroutines.sync.withPermit
@@ -18,31 +19,43 @@ class DeveloperService(
     private val languageModelIntegration: LLMIntegration = LLMIntegration(),
     private val developerRepository: DeveloperRepository = DeveloperRepositoryImpl()
 ) {
-    private val semaphore = Semaphore(20)  // TODO - use some CircuitBraker to determine if LLM RPS is overhead
+    companion object {
+        private val PERMITS: Int = Config["async.permits"]?.toInt() ?: 50
+        private val BATCH_SIZE: Int = Config["async.batchSize"]?.toInt() ?: 5
+    }
+
+    private val semaphore = Semaphore(PERMITS)
 
     suspend fun evaluateDeveloper(developer: Developer): Report = coroutineScope {
         val allCommitsResults: MutableMap<String, MutableList<MatrixSchema>> = mutableMapOf()
 
-        // TODO - evaluate reps in diff corrutines
-        developer.repositories.map { repositoryUrl ->
-
-            val commits: List<Commit> = gitIntegration.getCommits(developer.name, developer.token, repositoryUrl)
-
-            commits.map { commit ->
+        developer.repositories.chunked(BATCH_SIZE).forEach { repositoriesBatch ->
+            val deferredResults = repositoriesBatch.map { repositoryUrl ->
                 async {
-                    semaphore.withPermit {
-                        repositoryAnalyzer.analyzeCommit(commit)
+                    val commits: List<Commit> =
+                        gitIntegration.getCommits(developer.name, developer.token, repositoryUrl)
+
+                    logInfo("DeveloperService#evaluateDeveloper get ${commits.size} commits with ${commits.map { commit -> commit.files.size }.sum()} files for developer ${developer}")
+
+                    val commitAnalysisResults = commits.map { commit ->
+                        async {
+                            semaphore.withPermit {
+                                repositoryAnalyzer.analyzeCommit(commit)
+                            }
+                        }
+                    }.awaitAll()
+
+                    commitAnalysisResults.forEach { commitAnalysisResult ->
+                        commitAnalysisResult.forEach { (language, analysisResult) ->
+                            allCommitsResults.computeIfAbsent(language) { mutableListOf() }.add(analysisResult)
+                        }
                     }
                 }
             }
-        }.flatten().awaitAll().forEach { commitAnalysisResult ->
-            commitAnalysisResult.forEach { (language, analysisResult) ->
-                allCommitsResults[language]?.add(analysisResult) ?: allCommitsResults.put(language, mutableListOf(analysisResult))
-            }
+            deferredResults.awaitAll()
         }
 
         val mergedResult = mergeAnalysisResults(allCommitsResults)
-
         val convertedAnalysisResult = convertToAnalysisResult(developer.name, mergedResult, allCommitsResults.size)
         val report = reportGenerator.generateReport(convertedAnalysisResult)
 

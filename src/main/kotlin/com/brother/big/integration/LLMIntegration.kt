@@ -4,6 +4,7 @@ import com.brother.big.integration.llm_utils.LLMPromptConsts.MOTIVATION_BASICS
 import com.brother.big.integration.llm_utils.LLMUtils.generateMergePrompt
 import com.brother.big.integration.llm_utils.LLMUtils.generatePrompt
 import com.brother.big.integration.llm_utils.LLMUtils.loadSchema
+import com.brother.big.model.llm.Evaluation
 import com.brother.big.model.llm.MatrixSchema
 import com.brother.big.utils.BigLogger.logDebug
 import com.brother.big.utils.BigLogger.logError
@@ -21,9 +22,15 @@ import io.ktor.client.statement.*
 import io.ktor.http.*
 import java.net.InetSocketAddress
 import java.net.Proxy
+import kotlinx.coroutines.TimeoutCancellationException
+import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.sync.withLock
+import java.util.concurrent.atomic.AtomicInteger
+import java.util.concurrent.atomic.AtomicLong
 import kotlin.collections.component1
 import kotlin.collections.component2
 import kotlin.collections.set
+
 
 class LLMIntegration {
     companion object LLMIntegration {
@@ -38,24 +45,68 @@ class LLMIntegration {
         val PROXY_URL = Config["llm.proxyUrl"] ?: "proxyHost"
         val PROXY_PORT: Int = Config["llm.proxyPort"]?.toInt() ?: 60443
         val USE_PROXY: Boolean = Config["llm.useProxy"]?.toBoolean() ?: false
+        val RETRY_ATTEMPTS: Int = Config["llm.retryAttempts"]?.toInt() ?: 3
+        val RETRY_DELAY_MS: Long = Config["llm.retryDelayMs"]?.toLong() ?: 2000
+        val CB_FAILURE_THRESHOLD = Config["circuitBreaker.failureThreshold"]?.toInt() ?: 3
+        val CB_TIMEOUT_DURATION: Long = Config["circuitBreaker.timeoutDurationMillis"]?.toLong() ?: 12000
     }
 
     private val proxyAddress = InetSocketAddress(PROXY_URL, PROXY_PORT)
     private val httpsProxy = Proxy(Proxy.Type.HTTP, proxyAddress)
 
-    val llmClient = HttpClient(OkHttp) {
-        install (HttpTimeout) {
-            requestTimeoutMillis = Config["llm.requestTimeoutMillis"]?.toLong() ?: 100000
-            connectTimeoutMillis = Config["llm.connectionTimeoutMillis"]?.toLong() ?: 100000
-        }
-        engine {
-            proxy = httpsProxy
-        }
-    }
+    private var consecutiveFailures = AtomicInteger(0)
+    private val circuitOpenUntil = AtomicLong(0)
+    private val mutex = Mutex()
 
     private val mapper = jacksonObjectMapper()
 
-    fun getRequestBody(prompt: String): String {
+    val llmClient = HttpClient(OkHttp) {
+        engine {
+            config {
+                followRedirects(true)
+                proxy = httpsProxy
+            }
+        }
+        install (HttpTimeout) {
+            requestTimeoutMillis = Config["llm.requestTimeoutMillis"]?.toLong() ?: 10000
+            connectTimeoutMillis = Config["llm.connectionTimeoutMillis"]?.toLong() ?: 10000
+        }
+        install(HttpRequestRetry) {
+            maxRetries = RETRY_ATTEMPTS
+            retryIf { _, response ->
+                response.status.value >= 500
+            }
+            retryOnExceptionIf { _, cause ->
+                cause is TimeoutCancellationException || cause is java.io.IOException
+            }
+            delayMillis { retry ->
+                RETRY_DELAY_MS * retry
+            }
+            modifyRequest { http ->
+                logInfo("Retrying request [Body: ${http.body}]")
+            }
+        }
+    }
+
+    private fun isCircuitOpen(): Boolean {
+        val now = System.currentTimeMillis()
+        return now < circuitOpenUntil.get()
+    }
+
+    private fun openCircuit() {
+        val now = System.currentTimeMillis()
+        circuitOpenUntil.set(now + CB_TIMEOUT_DURATION)
+        logError("CB is open until ${circuitOpenUntil.get()}")
+    }
+
+    private suspend fun resetCircuit() {
+        mutex.withLock {
+            consecutiveFailures.set(0)
+            circuitOpenUntil.set(0)
+        }
+    }
+
+    private fun getRequestBody(prompt: String): String {
         return mapper.writeValueAsString(
             mapOf(
                 "model" to MODEL,
@@ -69,20 +120,38 @@ class LLMIntegration {
         )
     }
 
-    suspend fun getResponse(requestBody: String): HttpResponse = llmClient.post(LLM_URL) {
-        contentType(ContentType.Application.Json)
-        header("Authorization", "Bearer $API_KEY")
-        setBody(requestBody)
+    private suspend fun getResponse(requestBody: String): HttpResponse? {
+        if (isCircuitOpen()) {
+            logError("Circuit breaker is open, refusing request.")
+            return null
+        }
+        return try {
+            val response = llmClient.post(LLM_URL) {
+                contentType(ContentType.Application.Json)
+                header("Authorization", "Bearer $API_KEY")
+                setBody(requestBody)
+            }
+
+            resetCircuit()
+            response
+        } catch (e: Exception) {
+            logError("Error while http request to LLM: ${e.message}")
+
+            val currentFailures = consecutiveFailures.incrementAndGet()
+            if (currentFailures >= CB_FAILURE_THRESHOLD) {
+                openCircuit()
+            }
+            return null
+        }
     }
 
-    fun deserializeMatrixSchemaJac(jsonString: String): MatrixSchema {
+    private fun deserializeMatrixSchemaJac(jsonString: String): MatrixSchema {
         val cleanedJson = cleanRawString(jsonString)
-        logInfo("CLEANED JSON: $cleanedJson")
         return try {
             mapper.readValue<MatrixSchema>(cleanedJson)
         } catch (e: Exception) {
             logError("DESERIALIZATION ERROR: ${e.message}")
-            throw e
+            return emptyMatrix
         }
     }
 
@@ -90,13 +159,10 @@ class LLMIntegration {
         val prompt = generatePrompt(code, language)
         val requestBody = getRequestBody(prompt)
 
-        val response: HttpResponse = getResponse(requestBody)
+        val response: HttpResponse = getResponse(requestBody) ?: return emptyMatrix
         val rawResponseBody = response.bodyAsText()
 
-        logInfo("LLM RESPONSE: $rawResponseBody")
-
         val content = extractGptResponse(rawResponseBody)
-        requireNotNull(content) { logError("GPT RESPONSE EXTRACTION FAILED") }
 
         return deserializeMatrixSchemaJac(content)
     }
@@ -114,13 +180,10 @@ class LLMIntegration {
 
             val requestBody = getRequestBody(prompt)
 
-            val response = getResponse(requestBody)
+            val response = getResponse(requestBody) ?: return mutableMapOf("default" to emptyMatrix)
             val rawResponseBody = response.bodyAsText()
 
-            logDebug("LLM MERGING: $rawResponseBody")
-
             val content = extractGptResponse(rawResponseBody)
-            requireNotNull(content) { logError("GPT RESPONSE EXTRACTION FAILED") }
 
             val mergedMatrixSchema = deserializeMatrixSchemaJac(content)
             mergedResults[language] = mergedMatrixSchema
@@ -129,9 +192,25 @@ class LLMIntegration {
         return mergedResults
     }
 
-    fun extractGptResponse(rawResp: String): String? {
+    private fun extractGptResponse(rawResp: String): String {
         val jsonNode: JsonNode = mapper.readTree(rawResp)
-        val content = jsonNode["choices"]?.get(0)?.get("message")?.get("content")?.asText()
-        return content
+        try {
+            val content = jsonNode["choices"]?.get(0)?.get("message")?.get("content")?.asText()
+            requireNotNull(content)
+            return content
+        } catch (e: Error) {
+            logError("LLM RESPONSE EXTRACTION FAILED: ${e.message}")
+            return emptyMatrix.toString()
+        }
     }
+
+    private val emptyMatrix = MatrixSchema(
+        type = "",
+        title = "",
+        languageCompetencies =  mutableMapOf("" to Evaluation(0)),
+        algorithmSkills = Evaluation(0),
+        dbSkills = Evaluation(0),
+        brokerSkills = Evaluation(0),
+        summary = ""
+    )
 }
