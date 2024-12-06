@@ -6,7 +6,6 @@ import com.brother.big.integration.llm_utils.LLMUtils.generatePrompt
 import com.brother.big.integration.llm_utils.LLMUtils.loadSchema
 import com.brother.big.model.llm.Evaluation
 import com.brother.big.model.llm.MatrixSchema
-import com.brother.big.utils.BigLogger.logDebug
 import com.brother.big.utils.BigLogger.logError
 import com.brother.big.utils.BigLogger.logInfo
 import com.brother.big.utils.Config
@@ -20,8 +19,6 @@ import io.ktor.client.plugins.*
 import io.ktor.client.request.*
 import io.ktor.client.statement.*
 import io.ktor.http.*
-import java.net.InetSocketAddress
-import java.net.Proxy
 import kotlinx.coroutines.TimeoutCancellationException
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
@@ -42,17 +39,11 @@ class LLMIntegration {
         val API_KEY = Config["llm.apiKey"] ?: "apiKey"
         val LLM_URL = Config["llm.llmUrl"] ?: "llm://localhost:1212"
         val MERGE_LIMIT: Int = Config["llm.mergeLimit"]?.toInt() ?: 30
-        val PROXY_URL = Config["llm.proxyUrl"] ?: "proxyHost"
-        val PROXY_PORT: Int = Config["llm.proxyPort"]?.toInt() ?: 60443
-        val USE_PROXY: Boolean = Config["llm.useProxy"]?.toBoolean() ?: false
         val RETRY_ATTEMPTS: Int = Config["llm.retryAttempts"]?.toInt() ?: 3
         val RETRY_DELAY_MS: Long = Config["llm.retryDelayMs"]?.toLong() ?: 2000
         val CB_FAILURE_THRESHOLD = Config["circuitBreaker.failureThreshold"]?.toInt() ?: 3
         val CB_TIMEOUT_DURATION: Long = Config["circuitBreaker.timeoutDurationMillis"]?.toLong() ?: 12000
     }
-
-    private val proxyAddress = InetSocketAddress(PROXY_URL, PROXY_PORT)
-    private val httpsProxy = Proxy(Proxy.Type.HTTP, proxyAddress)
 
     private var consecutiveFailures = AtomicInteger(0)
     private val circuitOpenUntil = AtomicLong(0)
@@ -64,7 +55,6 @@ class LLMIntegration {
         engine {
             config {
                 followRedirects(true)
-                proxy = httpsProxy
             }
         }
         install (HttpTimeout) {
